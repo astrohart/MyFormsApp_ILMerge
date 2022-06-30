@@ -21,12 +21,6 @@ namespace MyFormsApp_ILMerge.Documents
         private DocumentState _currentState;
 
         /// <summary>
-        /// A <see cref="T:System.String" /> that holds the contents of the file that is
-        /// currently open.
-        /// </summary>
-        private string _fileContents;
-
-        /// <summary>
         /// Initializes static instances of the
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> class.
         /// </summary>
@@ -78,14 +72,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// <summary>
         /// Gets or sets the contents of the file that is currently open.
         /// </summary>
-        public string FileContents
-        {
-            get => _fileContents;
-            set
-            {
-                _fileContents = value;
-            }
-        }
+        public string FileContents { get; private set; }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the fully-qualified

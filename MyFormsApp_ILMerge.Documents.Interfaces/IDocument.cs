@@ -32,7 +32,7 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// <summary>
         /// Gets or sets the contents of the file that is currently open.
         /// </summary>
-        string FileContents { get; set; }
+        string FileContents { get; }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
