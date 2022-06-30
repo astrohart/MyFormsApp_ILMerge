@@ -150,7 +150,10 @@ namespace MyFormsApp_ILMerge.Documents
         /// blank string (the default) in order to mark this as a new document.
         /// </remarks>
         public void SetFileName(string fileName = "")
-            => throw new NotImplementedException();
+        {
+            FileName = fileName;
+            UpdateAllViews();
+        }
 
         /// <summary>
         /// Raises the
