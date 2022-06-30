@@ -45,6 +45,7 @@
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GetDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -60,6 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Interfaces\MyFormsApp_ILMerge.Documents.Interfaces.csproj">
+      <Project>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents\MyFormsApp_ILMerge.Documents.csproj">
+      <Project>{35B960CB-B356-4820-894A-EFC56BEE6EAA}</Project>
+      <Name>MyFormsApp_ILMerge.Documents</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

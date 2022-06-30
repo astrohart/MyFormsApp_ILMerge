@@ -1,4 +1,5 @@
 ﻿using MyFormsApp_ILMerge.Documents;
+using MyFormsApp_ILMerge.Documents.Interfaces;
 using System;
 using System.Windows.Forms;
 

@@ -2,7 +2,7 @@
 using MyFormsApp_ILMerge.Documents.Events;
 using System;
 
-namespace MyFormsApp_ILMerge.Documents
+namespace MyFormsApp_ILMerge.Documents.Interfaces
 {
     /// <summary>
     /// Defines the publicly-exposed methods and properties of a document object.
@@ -98,7 +98,7 @@ namespace MyFormsApp_ILMerge.Documents
 
         /// <summary>
         /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.Dirty" /> property.
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty" /> property.
         /// </summary>
         /// <param name="dirty">
         /// (Optional.)  Default is <see langword="true" />.  Set to
@@ -109,7 +109,7 @@ namespace MyFormsApp_ILMerge.Documents
 
         /// <summary>
         /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.FileName" /> property.
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName" /> property.
         /// </summary>
         /// <param name="fileName">
         /// (Optional.) String containing the fully-qualified
