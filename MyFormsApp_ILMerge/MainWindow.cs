@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge
 {
@@ -14,24 +15,20 @@ namespace MyFormsApp_ILMerge
         public MainWindow()
             => InitializeComponent();
 
-        private void OnFileExit(object sender, System.EventArgs e)
-        {
+        private void OnFileExit(object sender, EventArgs e)
+            => Close();
 
+        private void OnFileOpen(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog(this) == DialogResult.Cancel) return;
+
+            // TODO: Add code here to open the file that is chosen by the user.
         }
 
-        private void OnFileOpen(object sender, System.EventArgs e)
-        {
+        private void OnViewStatusBar(object sender, EventArgs e)
+            => statusBar.Visible = !statusBar.Visible;
 
-        }
-
-        private void OnViewToolbar(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void OnViewStatusBar(object sender, System.EventArgs e)
-        {
-
-        }
+        private void OnViewToolbar(object sender, EventArgs e)
+            => standardToolStrip.Visible = !standardToolStrip.Visible;
     }
 }
