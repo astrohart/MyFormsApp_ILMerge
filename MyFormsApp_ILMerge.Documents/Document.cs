@@ -118,6 +118,11 @@ namespace MyFormsApp_ILMerge.Documents
         public event EventHandler DataUpdated;
 
         /// <summary>
+        /// Occurs when the state of the document changes.
+        /// </summary>
+        public event DocumentStateChangedEventHandler DocumentStateChanged;
+
+        /// <summary>
         /// Occurs when the user attempts to open a file whose type this document object
         /// does not support.
         /// </summary>
@@ -186,6 +191,10 @@ namespace MyFormsApp_ILMerge.Documents
 
                 // Load the new data from the file with the specified pathname
                 FileContents = TextFileModel.LoadFrom(pathname);
+
+                // Check that the Open operation succeeded.
+                result = new FileInfo(pathname).Length == 0 ||
+                         !string.IsNullOrEmpty(FileContents);
             }
             catch (Exception ex)
             {
@@ -242,11 +251,6 @@ namespace MyFormsApp_ILMerge.Documents
             FileName = fileName;
             UpdateAllViews();
         }
-
-        /// <summary>
-        /// Occurs when the state of the document changes.
-        /// </summary>
-        public event DocumentStateChangedEventHandler DocumentStateChanged;
 
         /// <summary>
         /// Raises the
