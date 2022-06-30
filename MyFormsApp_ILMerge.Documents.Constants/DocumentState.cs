@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MyFormsApp_ILMerge.Documents.Constants
+﻿namespace MyFormsApp_ILMerge.Documents.Constants
 {
     /// <summary>
     /// Values that explain what state a document object is in.
