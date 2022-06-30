@@ -43,7 +43,8 @@ namespace MyFormsApp_ILMerge.Documents
         /// <remarks>
         /// This empty, protected constructor to prohibit direct allocation of this class.
         /// </remarks>
-        protected Document() { }
+        protected Document()
+            => SetDocumentState(DocumentState.Idle);    // start this object out in the Idle state
 
         /// <summary>
         /// Gets one of the
@@ -185,6 +186,8 @@ namespace MyFormsApp_ILMerge.Documents
                 return result;
             }
 
+            SetDocumentState(DocumentState.Opening);
+
             // Read the data
             try
             {
@@ -199,6 +202,9 @@ namespace MyFormsApp_ILMerge.Documents
                 // property has a non-blank value.
                 result = new FileInfo(pathname).Length == 0 ||
                          !string.IsNullOrEmpty(FileContents);
+
+                if (result) SetDocumentState(DocumentState.Opened);
+
             }
             catch (Exception ex)
             {

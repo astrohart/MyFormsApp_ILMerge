@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MyFormsApp_ILMerge")]
+[assembly: AssemblyTitle("ILMerge Demo Application")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("xyLOGIX, LLC")]
-[assembly: AssemblyProduct("MyFormsApp_ILMerge")]
+[assembly: AssemblyProduct("ILMerge Demo Application")]
 [assembly: AssemblyCopyright("Copyright © xyLOGIX, LLC 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

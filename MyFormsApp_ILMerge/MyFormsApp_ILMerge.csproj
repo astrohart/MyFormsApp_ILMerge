@@ -116,6 +116,14 @@
     <Content Include="notepad_2.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Constants\MyFormsApp_ILMerge.Documents.Constants.csproj">
+      <Project>{A265AC0F-78F3-437F-9578-6F85195E570D}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Factories\MyFormsApp_ILMerge.Documents.Factories.csproj">
+      <Project>{C4BEF704-7F21-42A8-9EE7-8AF8ECF93B3C}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Factories</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Interfaces\MyFormsApp_ILMerge.Documents.Interfaces.csproj">
       <Project>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</Project>
       <Name>MyFormsApp_ILMerge.Documents.Interfaces</Name>
