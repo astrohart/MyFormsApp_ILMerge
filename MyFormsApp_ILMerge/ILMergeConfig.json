@@ -1,0 +1,43 @@
+﻿{
+  "General": {
+    "OutputFile": null,
+    "TargetPlatform": null,
+    "KeyFile": null,
+    "AlternativeILMergePath": null,
+    "InputAssemblies": [
+      "AlphaFS.dll",
+      "MyFormsApp_ILMerge.Models.Interfaces.dll",
+      "PostSharp.dll",
+      "PostSharp.Patterns.Common.dll",
+      "PostSharp.Patterns.Diagnostics.Backends.Log4Net.dll",
+      "PostSharp.Patterns.Diagnostics.dll",
+      "Core.Logging.dll",
+      "Core.Logging.Constants.dll",
+      "Core.Logging.Events.dll",
+      "log4net.dll"
+    ]
+  },
+  "Advanced": {
+    "AllowDuplicateType": null,
+    "AllowMultipleAssemblyLevelAttributes": false,
+    "AllowWildCards": false,
+    "AllowZeroPeKind": false,
+    "AttributeFile": null,
+    "Closed": true,
+    "CopyAttributes": false,
+    "DebugInfo": true,
+    "DelaySign": false,
+    "DeleteCopiesOverwriteTarget": false,
+    "ExcludeFile": "",
+    "FileAlignment": 512,
+    "Internalize": false,
+    "Log": false,
+    "LogFile": null,
+    "PublicKeyTokens": true,
+    "SearchDirectories": [],
+    "TargetKind": null,
+    "UnionMerge": false,
+    "Version": null,
+    "XmlDocumentation": false
+  }
+}

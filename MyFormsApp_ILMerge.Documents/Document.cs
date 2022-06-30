@@ -1,4 +1,5 @@
 ﻿using Alphaleonis.Win32.Filesystem;
+using Core.Logging;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
 using MyFormsApp_ILMerge.Documents.Interfaces;
@@ -6,6 +7,7 @@ using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Factories;
 using MyFormsApp_ILMerge.Models.Interfaces;
 using System;
+using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge.Documents
 {
@@ -70,6 +72,14 @@ namespace MyFormsApp_ILMerge.Documents
         public bool Dirty { get; private set; }
 
         /// <summary>
+        /// Gets or sets a reference to an instance of an object that implements the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface
+        /// and which plays the role of the document template that "owns" this document
+        /// object.
+        /// </summary>
+        public IDocTemplate DocTemplate { get; set; }
+
+        /// <summary>
         /// Gets or sets the contents of the file that is currently open.
         /// </summary>
         public string FileContents { get; private set; }
@@ -89,14 +99,6 @@ namespace MyFormsApp_ILMerge.Documents
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" />.
         /// </summary>
         public static Document Instance { get; } = new Document();
-
-        /// <summary>
-        /// Gets or sets a reference to an instance of an object that implements the
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface
-        /// and which plays the role of the document template that "owns" this document
-        /// object.
-        /// </summary>
-        public IDocTemplate DocTemplate { get; set; }
 
         /// <summary>
         /// Gets a reference to an instance of the object that implements the
@@ -203,7 +205,13 @@ namespace MyFormsApp_ILMerge.Documents
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show(
+                    ex.Message, Application.ProductName, MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1
+                );
+
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
 
                 result = false;
             }

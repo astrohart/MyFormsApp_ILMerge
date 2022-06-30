@@ -1,7 +1,9 @@
 ﻿using Alphaleonis.Win32.Filesystem;
+using Core.Logging;
 using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Interfaces;
 using System;
+using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge.Models
 {
@@ -59,7 +61,13 @@ namespace MyFormsApp_ILMerge.Models
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show(
+                    ex.Message, Application.ProductName, MessageBoxButtons.OK,
+                    MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1
+                );
+
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
 
                 result = string.Empty;
             }

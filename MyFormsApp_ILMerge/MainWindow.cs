@@ -1,4 +1,5 @@
 ﻿using Alphaleonis.Win32.Filesystem;
+using Core.Logging;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Factories;
 using MyFormsApp_ILMerge.Documents.Interfaces;
@@ -54,7 +55,14 @@ namespace MyFormsApp_ILMerge
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                MessageBox.Show(
+                    this, ex.Message, Application.ProductName,
+                    MessageBoxButtons.OK, MessageBoxIcon.Stop,
+                    MessageBoxDefaultButton.Button1
+                );
+
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
             }
         }
 
@@ -90,7 +98,7 @@ namespace MyFormsApp_ILMerge
             SetCaption();
             ResetFileContentTextBox();
 
-            fileContentTextBox.AppendText(Document.FileContents);
+            fileContentTextBox.Text = Document.FileContents;
         }
 
         private void OnFileExit(object sender, EventArgs e)
