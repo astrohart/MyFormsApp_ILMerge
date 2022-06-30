@@ -36,14 +36,10 @@ namespace MyFormsApp_ILMerge.Models.Factories
         /// This method will throw an exception if there are no types implemented
         /// that correspond to the enumeration value passed for the argument of the
         /// <paramref name="fileType" /> parameter.
+        /// <para />
+        /// If the specified <paramref name="fileType" /> is not supported, then the method
+        /// returns <see langword="null" />.
         /// </remarks>
-        /// <exception cref="T:System.ArgumentOutOfRangeException">
-        /// Thrown if there is no corresponding concrete type defined that implements the
-        /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.IFileModel{T}" />
-        /// interface and which corresponds to the specific enumeration value that
-        /// was passed for the argument of the <paramref name="fileType" /> parameter, if
-        /// it is not supported.
-        /// </exception>
         public static IFileModel<T> For<T>(FileType fileType)
         {
             IFileModel<T> result;
