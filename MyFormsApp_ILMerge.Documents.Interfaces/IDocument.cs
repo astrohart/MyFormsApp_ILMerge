@@ -21,6 +21,11 @@ namespace MyFormsApp_ILMerge.Documents
         bool Dirty { get; }
 
         /// <summary>
+        /// Gets or sets the contents of the file that is currently open.
+        /// </summary>
+        string FileContents { get; set; }
+
+        /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
         /// pathname of the file that is currently open.
         /// </summary>
