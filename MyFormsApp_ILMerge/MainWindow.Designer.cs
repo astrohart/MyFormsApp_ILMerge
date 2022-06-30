@@ -522,6 +522,7 @@ namespace MyFormsApp_ILMerge
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.standardToolStrip);
             this.Controls.Add(this.mainMenu);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenu;
             this.Name = "MainWindow";
