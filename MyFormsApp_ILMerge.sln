@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Document
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Documents", "MyFormsApp_ILMerge.Documents\MyFormsApp_ILMerge.Documents.csproj", "{35B960CB-B356-4820-894A-EFC56BEE6EAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Models.Interfaces", "MyFormsApp_ILMerge.Models.Interfaces\MyFormsApp_ILMerge.Models.Interfaces.csproj", "{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Models.Constants", "MyFormsApp_ILMerge.Models.Constants\MyFormsApp_ILMerge.Models.Constants.csproj", "{328E5CA6-7630-46A1-886C-7EE83B6D6186}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{35B960CB-B356-4820-894A-EFC56BEE6EAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35B960CB-B356-4820-894A-EFC56BEE6EAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35B960CB-B356-4820-894A-EFC56BEE6EAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{328E5CA6-7630-46A1-886C-7EE83B6D6186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328E5CA6-7630-46A1-886C-7EE83B6D6186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328E5CA6-7630-46A1-886C-7EE83B6D6186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328E5CA6-7630-46A1-886C-7EE83B6D6186}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
