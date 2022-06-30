@@ -90,7 +90,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// document; <see langword="false" /> otherwise.
         /// </returns>
         public bool CloseDocument()
-            => throw new NotImplementedException();
+            => true;    // since this app does not have save functionality
 
         /// <summary>
         /// Determines whether the document object will open the file with the specified
