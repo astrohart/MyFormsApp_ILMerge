@@ -7,8 +7,8 @@
     <ProjectGuid>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyFormsApp_ILMerge.Documents</RootNamespace>
-    <AssemblyName>MyFormsApp_ILMerge.Documents</AssemblyName>
+    <RootNamespace>MyFormsApp_ILMerge.Documents.Interfaces</RootNamespace>
+    <AssemblyName>MyFormsApp_ILMerge.Documents.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -23,7 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MyFormsApp_ILMerge.Documents.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\MyFormsApp_ILMerge.Documents.Interfaces.xml</DocumentationFile>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -33,7 +33,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MyFormsApp_ILMerge.Documents.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\MyFormsApp_ILMerge.Documents.Interfaces.xml</DocumentationFile>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
