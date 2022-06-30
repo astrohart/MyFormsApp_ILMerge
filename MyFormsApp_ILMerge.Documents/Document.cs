@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyFormsApp_ILMerge.Documents
 {
     /// <summary>
     /// Defines the behaviors of a document object.
     /// </summary>
-    /// <remarks>Document objects manage the interaction between the application and the file system.</remarks>
+    /// <remarks>
+    /// Document objects manage the interaction between the application and
+    /// the file system.
+    /// </remarks>
     public class Document : IDocument
     {
         /// <summary>
@@ -84,5 +83,12 @@ namespace MyFormsApp_ILMerge.Documents
         /// </remarks>
         public void SetFileName(string fileName = "")
             => throw new NotImplementedException();
+
+        /// <summary>
+        /// Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DataUpdated" />
+        /// event.
+        /// </summary>
+        protected virtual void UpdateAllViews()
+            => DataUpdated?.Invoke(this, EventArgs.Empty);
     }
 }
