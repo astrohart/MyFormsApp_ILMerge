@@ -1,4 +1,7 @@
 ﻿using Alphaleonis.Win32.Filesystem;
+using MyFormsApp_ILMerge.Models.Constants;
+using MyFormsApp_ILMerge.Models.Factories;
+using MyFormsApp_ILMerge.Models.Interfaces;
 using System;
 
 namespace MyFormsApp_ILMerge.Documents
@@ -69,6 +72,14 @@ namespace MyFormsApp_ILMerge.Documents
         public static Document Instance { get; } = new Document();
 
         /// <summary>
+        /// Gets a reference to an instance of the object that implements the
+        /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface.
+        /// </summary>
+        /// <remarks>This object is responsible for loading and saving the file's data.</remarks>
+        private static ITextFileModel TextFileModel
+            => GetFileModel.For<string>(FileType.Text) as ITextFileModel;
+
+        /// <summary>
         /// Occurs when the document's data has been updated.
         /// </summary>
         /// <remarks>
@@ -91,7 +102,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// document; <see langword="false" /> otherwise.
         /// </returns>
         public bool CloseDocument()
-            => true;    // since this app does not have save functionality
+            => true; // since this app does not have save functionality
 
         /// <summary>
         /// Determines whether the document object will open the file with the specified

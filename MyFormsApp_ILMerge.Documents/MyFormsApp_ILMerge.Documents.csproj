@@ -67,6 +67,18 @@
       <Project>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</Project>
       <Name>MyFormsApp_ILMerge.Documents.Interfaces</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Models.Constants\MyFormsApp_ILMerge.Models.Constants.csproj">
+      <Project>{328E5CA6-7630-46A1-886C-7EE83B6D6186}</Project>
+      <Name>MyFormsApp_ILMerge.Models.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Models.Factories\MyFormsApp_ILMerge.Models.Factories.csproj">
+      <Project>{F3939AE2-F9B1-4FD9-A966-BC2E1E9D95AA}</Project>
+      <Name>MyFormsApp_ILMerge.Models.Factories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Models.Interfaces\MyFormsApp_ILMerge.Models.Interfaces.csproj">
+      <Project>{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}</Project>
+      <Name>MyFormsApp_ILMerge.Models.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
