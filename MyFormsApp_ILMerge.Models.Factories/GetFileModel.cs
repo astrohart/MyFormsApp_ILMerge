@@ -48,17 +48,26 @@ namespace MyFormsApp_ILMerge.Models.Factories
         {
             IFileModel<T> result;
 
-            switch (fileType)
+            try
             {
-                case FileType.Text:
-                    result = (IFileModel<T>)TextFileModel.Instance;
-                    break;
+                switch (fileType)
+                {
+                    case FileType.Text:
+                        result = (IFileModel<T>)TextFileModel.Instance;
+                        break;
 
-                default:
-                    throw new ArgumentOutOfRangeException(
-                        nameof(fileType), fileType,
-                        $"The file type, '{fileType}', is not supported."
-                    );
+                    default:
+                        throw new ArgumentOutOfRangeException(
+                            nameof(fileType), fileType,
+                            $"The file type, '{fileType}', is not supported."
+                        );
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+
+                result = default;
             }
 
             return result;
