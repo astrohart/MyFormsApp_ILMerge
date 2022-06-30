@@ -4,6 +4,10 @@
     /// Defines the publicly-exposed methods and properties of a document template
     /// object.
     /// </summary>
+    /// <remarks>
+    /// Shoutout to Chris Sells, and his book, "Windows Forms 2.0 Programming," for
+    /// inspiring the design of this interface.
+    /// </remarks>
     public interface IDocTemplate
     {
         /// <summary>
