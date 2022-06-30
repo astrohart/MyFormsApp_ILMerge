@@ -26,21 +26,6 @@ namespace MyFormsApp_ILMerge
         private static IDocument Document
             => GetDocument.SoleInstance();
 
-        /// <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary>
-        /// <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-
-            Document.DataUpdated += OnDocumentDataUpdated;
-        }
-
-        private void OnDocumentDataUpdated(object sender, EventArgs e)
-        {
-            SetCaption();
-            fileContentTextBox.Text = Document.FileContents;
-        }
-
         /// <summary>
         /// Opens the document having the specified <paramref name="path" />.
         /// </summary>
@@ -85,6 +70,28 @@ namespace MyFormsApp_ILMerge
                 : $"{Document.FileName}{(Document.Dirty ? "*" : ")$")} - {Application.ProductName}";
         }
 
+        /// <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary>
+        /// <param name="e">
+        /// An <see cref="T:System.EventArgs" /> that contains the event
+        /// data.
+        /// </param>
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            Document.DataUpdated += OnDocumentDataUpdated;
+
+            ResetFileContentTextBox();
+        }
+
+        private void OnDocumentDataUpdated(object sender, EventArgs e)
+        {
+            SetCaption();
+            ResetFileContentTextBox();
+
+            fileContentTextBox.AppendText(Document.FileContents);
+        }
+
         private void OnFileExit(object sender, EventArgs e)
             => Close();
 
@@ -100,5 +107,11 @@ namespace MyFormsApp_ILMerge
 
         private void OnViewToolbar(object sender, EventArgs e)
             => standardToolStrip.Visible = !standardToolStrip.Visible;
+
+        private void ResetFileContentTextBox()
+        {
+            fileContentTextBox.Clear();
+            fileContentTextBox.ClearUndo();
+        }
     }
 }
