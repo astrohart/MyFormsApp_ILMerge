@@ -5,7 +5,6 @@
 
 - [Document](#T-MyFormsApp_ILMerge-Documents-Document 'MyFormsApp_ILMerge.Documents.Document')
   - [#ctor()](#M-MyFormsApp_ILMerge-Documents-Document-#ctor 'MyFormsApp_ILMerge.Documents.Document.#ctor')
-  - [_fileContents](#F-MyFormsApp_ILMerge-Documents-Document-_fileContents 'MyFormsApp_ILMerge.Documents.Document._fileContents')
   - [CurrentState](#P-MyFormsApp_ILMerge-Documents-Document-CurrentState 'MyFormsApp_ILMerge.Documents.Document.CurrentState')
   - [Dirty](#P-MyFormsApp_ILMerge-Documents-Document-Dirty 'MyFormsApp_ILMerge.Documents.Document.Dirty')
   - [DocTemplate](#P-MyFormsApp_ILMerge-Documents-Document-DocTemplate 'MyFormsApp_ILMerge.Documents.Document.DocTemplate')
@@ -59,14 +58,6 @@ This constructor has no parameters.
 ##### Remarks
 
 This empty, protected constructor to prohibit direct allocation of this class.
-
-<a name='F-MyFormsApp_ILMerge-Documents-Document-_fileContents'></a>
-### _fileContents `constants`
-
-##### Summary
-
-A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that holds the contents of the file that is
-currently open.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-CurrentState'></a>
 ### CurrentState `property`
