@@ -44,7 +44,9 @@ namespace MyFormsApp_ILMerge.Documents
         /// This empty, protected constructor to prohibit direct allocation of this class.
         /// </remarks>
         protected Document()
-            => SetDocumentState(DocumentState.Idle);    // start this object out in the Idle state
+            => SetDocumentState(
+                DocumentState.Idle
+            ); // start this object out in the Idle state
 
         /// <summary>
         /// Gets one of the
@@ -101,6 +103,14 @@ namespace MyFormsApp_ILMerge.Documents
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" />.
         /// </summary>
         public static Document Instance { get; } = new Document();
+
+        /// <summary>
+        /// Gets or sets a reference to an instance of an object that implements the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface
+        /// and which plays the role of the document template that "owns" this document
+        /// object.
+        /// </summary>
+        public IDocTemplate Template { get; set; }
 
         /// <summary>
         /// Gets a reference to an instance of the object that implements the
@@ -204,7 +214,6 @@ namespace MyFormsApp_ILMerge.Documents
                          !string.IsNullOrEmpty(FileContents);
 
                 if (result) SetDocumentState(DocumentState.Opened);
-
             }
             catch (Exception ex)
             {

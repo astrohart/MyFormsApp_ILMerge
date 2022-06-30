@@ -17,6 +17,13 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
     public interface IDocument
     {
         /// <summary>
+        /// Gets one of the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
+        /// enumeration values that explain what state the document object is in.
+        /// </summary>
+        DocumentState CurrentState { get; }
+
+        /// <summary>
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
         /// document has been modified.
         /// </summary>
@@ -38,11 +45,12 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         string FileName { get; }
 
         /// <summary>
-        /// Gets one of the
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration values that explain what state the document object is in.
+        /// Gets or sets a reference to an instance of an object that implements the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface
+        /// and which plays the role of the document template that "owns" this document
+        /// object.
         /// </summary>
-        DocumentState CurrentState { get; }
+        IDocTemplate Template { get; set; }
 
         /// <summary>
         /// Occurs when the document's data has been updated.
@@ -52,6 +60,11 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// need to update themselves to display the most recent data.
         /// </remarks>
         event EventHandler DataUpdated;
+
+        /// <summary>
+        /// Occurs when the state of the document changes.
+        /// </summary>
+        event DocumentStateChangedEventHandler DocumentStateChanged;
 
         /// <summary>
         /// Occurs when the user attempts to open a file whose type this document object
@@ -98,7 +111,8 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
 
         /// <summary>
         /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty" /> property.
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty" />
+        /// property.
         /// </summary>
         /// <param name="dirty">
         /// (Optional.)  Default is <see langword="true" />.  Set to
@@ -109,7 +123,8 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
 
         /// <summary>
         /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName" /> property.
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName" />
+        /// property.
         /// </summary>
         /// <param name="fileName">
         /// (Optional.) String containing the fully-qualified
@@ -120,10 +135,5 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// blank string (the default) in order to mark this as a new document.
         /// </remarks>
         void SetFileName(string fileName = "");
-
-        /// <summary>
-        /// Occurs when the state of the document changes.
-        /// </summary>
-        event DocumentStateChangedEventHandler DocumentStateChanged;
     }
 }
