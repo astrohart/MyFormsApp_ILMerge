@@ -100,7 +100,7 @@ namespace MyFormsApp_ILMerge
         {
             if (openFileDialog.ShowDialog(this) == DialogResult.Cancel) return;
 
-            // TODO: Add code here to open the file that is chosen by the user.
+            OpenDocumentFile(openFileDialog.FileName);
         }
 
         private void OnViewStatusBar(object sender, EventArgs e)
