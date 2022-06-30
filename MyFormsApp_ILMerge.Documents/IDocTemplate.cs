@@ -1,7 +1,8 @@
 ﻿namespace MyFormsApp_ILMerge.Documents
 {
     /// <summary>
-    /// Defines the publicly-exposed methods and properties of a document template object.
+    /// Defines the publicly-exposed methods and properties of a document template
+    /// object.
     /// </summary>
     public interface IDocTemplate
     {
@@ -13,5 +14,10 @@
         /// pathname of the file you wish to open.
         /// </param>
         void OpenDocumentFile(string path);
+
+        /// <summary>
+        /// Sets the caption(s) of all views that are displaying documents of this type.
+        /// </summary>
+        void SetCaption();
     }
 }
