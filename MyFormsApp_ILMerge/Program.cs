@@ -3,6 +3,9 @@ using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge
 {
+    /// <summary>
+    /// Defines the behaviors of the application.
+    /// </summary>
     public static class Program
     {
         /// <summary>
