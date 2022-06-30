@@ -193,7 +193,9 @@ namespace MyFormsApp_ILMerge.Documents
                 // Load the new data from the file with the specified pathname
                 FileContents = TextFileModel.LoadFrom(pathname);
 
-                // Check that the Open operation succeeded.
+                // Check that the Open operation succeeded. It could be a zero-length
+                // file, so make sure to test for that as well as whether the FileContents
+                // property has a non-blank value.
                 result = new FileInfo(pathname).Length == 0 ||
                          !string.IsNullOrEmpty(FileContents);
             }
