@@ -12,8 +12,12 @@ namespace MyFormsApp_ILMerge.Documents
     public class Document : IDocument
     {
         /// <summary>
-        /// Empty, static constructor to prohibit direct allocation of this class.
+        /// Initializes static instances of the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> class.
         /// </summary>
+        /// <remarks>
+        /// Empty, static constructor to prohibit direct allocation of this class.
+        /// </remarks>
         static Document() { }
 
         /// <summary>
