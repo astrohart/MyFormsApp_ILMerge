@@ -6,6 +6,10 @@ namespace MyFormsApp_ILMerge.Models.Interfaces
     /// Defines the publicly-exposed methods and properties of an object that models a
     /// file on the disk.
     /// </summary>
+    /// <remarks>
+    /// Right now, for the purposes of this ILMerge demo app, we only support
+    /// the loading of data from files on the disk, not the saving of the data.
+    /// </remarks>
     /// <typeparam name="T">
     /// Specifies the name of the class or primitive type that
     /// encapsulates the file's data.
