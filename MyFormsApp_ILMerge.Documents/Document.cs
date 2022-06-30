@@ -11,6 +11,8 @@ namespace MyFormsApp_ILMerge.Documents
     /// </remarks>
     public class Document : IDocument
     {
+        private string _fileContents;
+
         /// <summary>
         /// Initializes static instances of the
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> class.
@@ -39,7 +41,16 @@ namespace MyFormsApp_ILMerge.Documents
         /// <summary>
         /// Gets or sets the contents of the file that is currently open.
         /// </summary>
-        public string FileContents { get; set; }
+        public string FileContents
+        {
+            get => _fileContents;
+            set
+            {
+                var incomingData = value;
+                SetDirty(!incomingData.Equals(_fileContents));
+                _fileContents = incomingData;
+            }
+        }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
