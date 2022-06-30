@@ -9,6 +9,7 @@
 - [IDocument](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocument 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument')
   - [CurrentState](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-CurrentState 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.CurrentState')
   - [Dirty](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-Dirty 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty')
+  - [DocTemplate](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-DocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.DocTemplate')
   - [FileContents](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileContents 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileContents')
   - [FileName](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileName 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName')
   - [CloseDocument()](#M-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-CloseDocument 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.CloseDocument')
@@ -100,6 +101,16 @@ enumeration values that explain what state the document object is in.
 Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether this
 document has been modified.
 
+<a name='P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-DocTemplate'></a>
+### DocTemplate `property`
+
+##### Summary
+
+Gets or sets a reference to an instance of an object that implements the
+[IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate') interface
+and which plays the role of the document template that "owns" this document
+object.
+
 <a name='P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileContents'></a>
 ### FileContents `property`
 
@@ -186,7 +197,8 @@ pathname of the file to be opened. |
 ##### Summary
 
 Sets the value of the
-[Dirty](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-Dirty 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty') property.
+[Dirty](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-Dirty 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.Dirty')
+property.
 
 ##### Parameters
 
@@ -202,7 +214,8 @@ otherwise. |
 ##### Summary
 
 Sets the value of the
-[FileName](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileName 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName') property.
+[FileName](#P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileName 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument.FileName')
+property.
 
 ##### Parameters
 
