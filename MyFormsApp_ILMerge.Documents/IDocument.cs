@@ -1,4 +1,6 @@
-﻿namespace MyFormsApp_ILMerge.Documents
+﻿using System;
+
+namespace MyFormsApp_ILMerge.Documents
 {
     /// <summary>
     /// Defines the publicly-exposed methods and properties of a document object.
@@ -24,6 +26,15 @@
         /// string, then no document is loaded, or the user is working on a new document.
         /// </remarks>
         string FileName { get; }
+
+        /// <summary>
+        /// Occurs when the document's data has been updated.
+        /// </summary>
+        /// <remarks>
+        /// This event serves to let the views of this document know that they
+        /// need to update themselves to display the most recent data.
+        /// </remarks>
+        event EventHandler DataUpdated;
 
         /// <summary>
         /// Sets the value of the
