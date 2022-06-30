@@ -77,6 +77,7 @@ namespace MyFormsApp_ILMerge
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.messageLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileContentTextBox = new System.Windows.Forms.TextBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainMenu.SuspendLayout();
             this.standardToolStrip.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -121,7 +122,7 @@ namespace MyFormsApp_ILMerge
             this.fileNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileNew.Name = "fileNew";
             this.fileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.fileNew.Size = new System.Drawing.Size(224, 26);
+            this.fileNew.Size = new System.Drawing.Size(181, 26);
             this.fileNew.Text = "&New";
             // 
             // fileOpen
@@ -130,13 +131,13 @@ namespace MyFormsApp_ILMerge
             this.fileOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileOpen.Name = "fileOpen";
             this.fileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.fileOpen.Size = new System.Drawing.Size(224, 26);
+            this.fileOpen.Size = new System.Drawing.Size(181, 26);
             this.fileOpen.Text = "&Open";
             // 
             // sep3
             // 
             this.sep3.Name = "sep3";
-            this.sep3.Size = new System.Drawing.Size(221, 6);
+            this.sep3.Size = new System.Drawing.Size(178, 6);
             // 
             // fileSave
             // 
@@ -145,20 +146,20 @@ namespace MyFormsApp_ILMerge
             this.fileSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileSave.Name = "fileSave";
             this.fileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.fileSave.Size = new System.Drawing.Size(224, 26);
+            this.fileSave.Size = new System.Drawing.Size(181, 26);
             this.fileSave.Text = "&Save";
             // 
             // fileSaveAs
             // 
             this.fileSaveAs.Enabled = false;
             this.fileSaveAs.Name = "fileSaveAs";
-            this.fileSaveAs.Size = new System.Drawing.Size(224, 26);
+            this.fileSaveAs.Size = new System.Drawing.Size(181, 26);
             this.fileSaveAs.Text = "Save &As";
             // 
             // sep4
             // 
             this.sep4.Name = "sep4";
-            this.sep4.Size = new System.Drawing.Size(221, 6);
+            this.sep4.Size = new System.Drawing.Size(178, 6);
             // 
             // filePrint
             // 
@@ -167,7 +168,7 @@ namespace MyFormsApp_ILMerge
             this.filePrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrint.Name = "filePrint";
             this.filePrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.filePrint.Size = new System.Drawing.Size(224, 26);
+            this.filePrint.Size = new System.Drawing.Size(181, 26);
             this.filePrint.Text = "&Print";
             // 
             // filePrintPreview
@@ -176,18 +177,18 @@ namespace MyFormsApp_ILMerge
             this.filePrintPreview.Image = ((System.Drawing.Image)(resources.GetObject("filePrintPreview.Image")));
             this.filePrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrintPreview.Name = "filePrintPreview";
-            this.filePrintPreview.Size = new System.Drawing.Size(224, 26);
+            this.filePrintPreview.Size = new System.Drawing.Size(181, 26);
             this.filePrintPreview.Text = "Print Pre&view";
             // 
             // sep5
             // 
             this.sep5.Name = "sep5";
-            this.sep5.Size = new System.Drawing.Size(221, 6);
+            this.sep5.Size = new System.Drawing.Size(178, 6);
             // 
             // fileExit
             // 
             this.fileExit.Name = "fileExit";
-            this.fileExit.Size = new System.Drawing.Size(224, 26);
+            this.fileExit.Size = new System.Drawing.Size(181, 26);
             this.fileExit.Text = "E&xit";
             // 
             // editMenu
@@ -210,7 +211,7 @@ namespace MyFormsApp_ILMerge
             this.editUndo.Enabled = false;
             this.editUndo.Name = "editUndo";
             this.editUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.editUndo.Size = new System.Drawing.Size(224, 26);
+            this.editUndo.Size = new System.Drawing.Size(179, 26);
             this.editUndo.Text = "&Undo";
             // 
             // editRedo
@@ -218,13 +219,13 @@ namespace MyFormsApp_ILMerge
             this.editRedo.Enabled = false;
             this.editRedo.Name = "editRedo";
             this.editRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.editRedo.Size = new System.Drawing.Size(224, 26);
+            this.editRedo.Size = new System.Drawing.Size(179, 26);
             this.editRedo.Text = "&Redo";
             // 
             // sep6
             // 
             this.sep6.Name = "sep6";
-            this.sep6.Size = new System.Drawing.Size(221, 6);
+            this.sep6.Size = new System.Drawing.Size(176, 6);
             // 
             // editCut
             // 
@@ -233,7 +234,7 @@ namespace MyFormsApp_ILMerge
             this.editCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editCut.Name = "editCut";
             this.editCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.editCut.Size = new System.Drawing.Size(224, 26);
+            this.editCut.Size = new System.Drawing.Size(179, 26);
             this.editCut.Text = "Cu&t";
             // 
             // editCopy
@@ -243,7 +244,7 @@ namespace MyFormsApp_ILMerge
             this.editCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editCopy.Name = "editCopy";
             this.editCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.editCopy.Size = new System.Drawing.Size(224, 26);
+            this.editCopy.Size = new System.Drawing.Size(179, 26);
             this.editCopy.Text = "&Copy";
             // 
             // editPaste
@@ -253,19 +254,19 @@ namespace MyFormsApp_ILMerge
             this.editPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editPaste.Name = "editPaste";
             this.editPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.editPaste.Size = new System.Drawing.Size(224, 26);
+            this.editPaste.Size = new System.Drawing.Size(179, 26);
             this.editPaste.Text = "&Paste";
             // 
             // sep7
             // 
             this.sep7.Name = "sep7";
-            this.sep7.Size = new System.Drawing.Size(221, 6);
+            this.sep7.Size = new System.Drawing.Size(176, 6);
             // 
             // editSelectAll
             // 
             this.editSelectAll.Enabled = false;
             this.editSelectAll.Name = "editSelectAll";
-            this.editSelectAll.Size = new System.Drawing.Size(224, 26);
+            this.editSelectAll.Size = new System.Drawing.Size(179, 26);
             this.editSelectAll.Text = "Select &All";
             // 
             // viewMenu
@@ -283,7 +284,7 @@ namespace MyFormsApp_ILMerge
             this.viewToolbar.CheckOnClick = true;
             this.viewToolbar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewToolbar.Name = "viewToolbar";
-            this.viewToolbar.Size = new System.Drawing.Size(224, 26);
+            this.viewToolbar.Size = new System.Drawing.Size(158, 26);
             this.viewToolbar.Text = "&Toolbar";
             // 
             // viewStatusBar
@@ -292,7 +293,7 @@ namespace MyFormsApp_ILMerge
             this.viewStatusBar.CheckOnClick = true;
             this.viewStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewStatusBar.Name = "viewStatusBar";
-            this.viewStatusBar.Size = new System.Drawing.Size(224, 26);
+            this.viewStatusBar.Size = new System.Drawing.Size(158, 26);
             this.viewStatusBar.Text = "&Status Bar";
             // 
             // toolsMenu
@@ -308,14 +309,14 @@ namespace MyFormsApp_ILMerge
             // 
             this.toolsCustomize.Enabled = false;
             this.toolsCustomize.Name = "toolsCustomize";
-            this.toolsCustomize.Size = new System.Drawing.Size(224, 26);
+            this.toolsCustomize.Size = new System.Drawing.Size(161, 26);
             this.toolsCustomize.Text = "&Customize";
             // 
             // toolsOptions
             // 
             this.toolsOptions.Enabled = false;
             this.toolsOptions.Name = "toolsOptions";
-            this.toolsOptions.Size = new System.Drawing.Size(224, 26);
+            this.toolsOptions.Size = new System.Drawing.Size(161, 26);
             this.toolsOptions.Text = "&Options";
             // 
             // helpMenu
@@ -334,33 +335,33 @@ namespace MyFormsApp_ILMerge
             // 
             this.helpContents.Enabled = false;
             this.helpContents.Name = "helpContents";
-            this.helpContents.Size = new System.Drawing.Size(224, 26);
+            this.helpContents.Size = new System.Drawing.Size(150, 26);
             this.helpContents.Text = "&Contents";
             // 
             // helpIndex
             // 
             this.helpIndex.Enabled = false;
             this.helpIndex.Name = "helpIndex";
-            this.helpIndex.Size = new System.Drawing.Size(224, 26);
+            this.helpIndex.Size = new System.Drawing.Size(150, 26);
             this.helpIndex.Text = "&Index";
             // 
             // helpSearch
             // 
             this.helpSearch.Enabled = false;
             this.helpSearch.Name = "helpSearch";
-            this.helpSearch.Size = new System.Drawing.Size(224, 26);
+            this.helpSearch.Size = new System.Drawing.Size(150, 26);
             this.helpSearch.Text = "&Search";
             // 
             // sep8
             // 
             this.sep8.Name = "sep8";
-            this.sep8.Size = new System.Drawing.Size(221, 6);
+            this.sep8.Size = new System.Drawing.Size(147, 6);
             // 
             // helpAbout
             // 
             this.helpAbout.Enabled = false;
             this.helpAbout.Name = "helpAbout";
-            this.helpAbout.Size = new System.Drawing.Size(224, 26);
+            this.helpAbout.Size = new System.Drawing.Size(150, 26);
             this.helpAbout.Text = "&About...";
             // 
             // standardToolStrip
@@ -500,6 +501,11 @@ namespace MyFormsApp_ILMerge
             this.fileContentTextBox.Size = new System.Drawing.Size(928, 465);
             this.fileContentTextBox.TabIndex = 3;
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "*.txt";
+            this.openFileDialog.Filter = "Text Document (*.txt)|*.txt|All Files (*.*)|*.*";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -573,6 +579,7 @@ namespace MyFormsApp_ILMerge
         private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.ToolStripStatusLabel messageLabel;
         private System.Windows.Forms.TextBox fileContentTextBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
     }
 }
 
