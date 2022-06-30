@@ -16,7 +16,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
         /// document has been modified.
         /// </summary>
-        public bool Dirty { get; }
+        public bool Dirty { get; private set; }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
@@ -26,7 +26,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// If the value of this property is <see langword="null" /> or the empty
         /// string, then no document is loaded, or the user is working on a new document.
         /// </remarks>
-        public string FileName { get; }
+        public string FileName { get; private set; }
 
         /// <summary>
         /// Occurs when the document's data has been updated.
