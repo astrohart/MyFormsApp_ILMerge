@@ -45,6 +45,7 @@
     <Reference Include="System.Transactions" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -60,6 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Models.Constants\MyFormsApp_ILMerge.Models.Constants.csproj">
+      <Project>{328E5CA6-7630-46A1-886C-7EE83B6D6186}</Project>
+      <Name>MyFormsApp_ILMerge.Models.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Models.Interfaces\MyFormsApp_ILMerge.Models.Interfaces.csproj">
+      <Project>{6CCC575E-5C71-4BD2-AE81-6DD3A85DD75E}</Project>
+      <Name>MyFormsApp_ILMerge.Models.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
