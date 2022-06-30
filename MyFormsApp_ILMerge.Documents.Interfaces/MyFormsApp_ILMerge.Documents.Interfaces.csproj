@@ -63,6 +63,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Constants\MyFormsApp_ILMerge.Documents.Constants.csproj">
+      <Project>{A265AC0F-78F3-437F-9578-6F85195E570D}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Events\MyFormsApp_ILMerge.Documents.Events.csproj">
+      <Project>{5BE333DD-A083-4626-A8CE-E1502B93FB09}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Events</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetDir)$(TargetName).md" (

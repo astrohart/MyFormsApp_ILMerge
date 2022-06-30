@@ -1,4 +1,6 @@
 ﻿using Alphaleonis.Win32.Filesystem;
+using MyFormsApp_ILMerge.Documents.Constants;
+using MyFormsApp_ILMerge.Documents.Events;
 using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Factories;
 using MyFormsApp_ILMerge.Models.Interfaces;
@@ -15,6 +17,8 @@ namespace MyFormsApp_ILMerge.Documents
     /// </remarks>
     public class Document : IDocument
     {
+        private DocumentState _currentState;
+
         /// <summary>
         /// A <see cref="T:System.String" /> that holds the contents of the file that is
         /// currently open.
@@ -39,6 +43,27 @@ namespace MyFormsApp_ILMerge.Documents
         /// This empty, protected constructor to prohibit direct allocation of this class.
         /// </remarks>
         protected Document() { }
+
+        /// <summary>
+        /// Gets one of the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
+        /// enumeration values that explain what state the document object is in.
+        /// </summary>
+        public DocumentState CurrentState
+        {
+            get => _currentState;
+            private set
+            {
+                var oldState = _currentState;
+
+                _currentState = value;
+
+                if (oldState != value)
+                    OnDocumentStateChanged(
+                        new DocumentStateChangedEventArgs(oldState, value)
+                    );
+            }
+        }
 
         /// <summary>
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
@@ -214,6 +239,25 @@ namespace MyFormsApp_ILMerge.Documents
             FileName = fileName;
             UpdateAllViews();
         }
+
+        /// <summary>
+        /// Occurs when the state of the document changes.
+        /// </summary>
+        public event DocumentStateChangedEventHandler DocumentStateChanged;
+
+        /// <summary>
+        /// Raises the
+        /// <see cref="E:MyFormsApp_ILMerge.Documents.Document.DocumentStateChanged" />
+        /// event.
+        /// </summary>
+        /// <param name="e">
+        /// A
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventArgs" />
+        /// that explains what the old and new states of the document object are.
+        /// </param>
+        protected virtual void OnDocumentStateChanged(
+            DocumentStateChangedEventArgs e)
+            => DocumentStateChanged?.Invoke(this, e);
 
         /// <summary>
         /// Raises the

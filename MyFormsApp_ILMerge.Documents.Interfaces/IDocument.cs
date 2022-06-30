@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyFormsApp_ILMerge.Documents.Constants;
+using MyFormsApp_ILMerge.Documents.Events;
+using System;
 
 namespace MyFormsApp_ILMerge.Documents
 {
@@ -34,6 +36,13 @@ namespace MyFormsApp_ILMerge.Documents
         /// string, then no document is loaded, or the user is working on a new document.
         /// </remarks>
         string FileName { get; }
+
+        /// <summary>
+        /// Gets one of the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
+        /// enumeration values that explain what state the document object is in.
+        /// </summary>
+        DocumentState CurrentState { get; }
 
         /// <summary>
         /// Occurs when the document's data has been updated.
@@ -111,5 +120,10 @@ namespace MyFormsApp_ILMerge.Documents
         /// blank string (the default) in order to mark this as a new document.
         /// </remarks>
         void SetFileName(string fileName = "");
+
+        /// <summary>
+        /// Occurs when the state of the document changes.
+        /// </summary>
+        event DocumentStateChangedEventHandler DocumentStateChanged;
     }
 }

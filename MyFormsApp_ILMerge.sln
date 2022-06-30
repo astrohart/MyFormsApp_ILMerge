@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Models.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Documents.Constants", "MyFormsApp_ILMerge.Documents.Constants\MyFormsApp_ILMerge.Documents.Constants.csproj", "{A265AC0F-78F3-437F-9578-6F85195E570D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFormsApp_ILMerge.Documents.Events", "MyFormsApp_ILMerge.Documents.Events\MyFormsApp_ILMerge.Documents.Events.csproj", "{5BE333DD-A083-4626-A8CE-E1502B93FB09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{A265AC0F-78F3-437F-9578-6F85195E570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A265AC0F-78F3-437F-9578-6F85195E570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A265AC0F-78F3-437F-9578-6F85195E570D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE333DD-A083-4626-A8CE-E1502B93FB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE333DD-A083-4626-A8CE-E1502B93FB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE333DD-A083-4626-A8CE-E1502B93FB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE333DD-A083-4626-A8CE-E1502B93FB09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
