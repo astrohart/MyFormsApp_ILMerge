@@ -503,8 +503,10 @@ namespace MyFormsApp_ILMerge
             // 
             // openFileDialog
             // 
+            this.openFileDialog.DefaultExt = "txt";
             this.openFileDialog.FileName = "*.txt";
             this.openFileDialog.Filter = "Text Document (*.txt)|*.txt|All Files (*.*)|*.*";
+            this.openFileDialog.Title = "Open File";
             // 
             // MainWindow
             // 
