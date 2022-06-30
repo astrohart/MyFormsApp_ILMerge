@@ -24,7 +24,7 @@ namespace MyFormsApp_ILMerge.Models.Interfaces
         /// If the value of this property is <see langword="null" /> or the blank
         /// string, then this means that a file is not currently loaded.
         /// </remarks>
-        string FileName { get; set; }
+        string FileName { get; }
 
         /// <summary>
         /// Gets a <see cref="T:MyFormsApp_ILMerge.Models.Constants.FileType" />
