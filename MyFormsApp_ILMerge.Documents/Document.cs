@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Alphaleonis.Win32.Filesystem;
+using System;
 
 namespace MyFormsApp_ILMerge.Documents
 {
@@ -109,7 +110,8 @@ namespace MyFormsApp_ILMerge.Documents
         /// otherwise.
         /// </returns>
         public bool IsFileTypeSupported(string pathname)
-            => throw new NotImplementedException();
+            => !string.IsNullOrWhiteSpace(pathname) &&
+               ".txt".Equals(Path.GetExtension(pathname));
 
         /// <summary>
         /// Opens a document with the specified <paramref name="pathname" />.
