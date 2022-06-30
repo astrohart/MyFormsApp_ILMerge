@@ -504,6 +504,7 @@ namespace MyFormsApp_ILMerge
             this.fileContentTextBox.Location = new System.Drawing.Point(0, 55);
             this.fileContentTextBox.Multiline = true;
             this.fileContentTextBox.Name = "fileContentTextBox";
+            this.fileContentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.fileContentTextBox.Size = new System.Drawing.Size(928, 465);
             this.fileContentTextBox.TabIndex = 3;
             // 
