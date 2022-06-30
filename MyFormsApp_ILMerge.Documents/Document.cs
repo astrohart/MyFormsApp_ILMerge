@@ -163,17 +163,20 @@ namespace MyFormsApp_ILMerge.Documents
         /// <returns></returns>
         public bool OpenDocument(string pathname)
         {
+            var result = false;
+
+            if (string.IsNullOrWhiteSpace(pathname)) return result;
+            if (!File.Exists(pathname)) return result;
+
             // Check if we can close the current file
-            if (!CloseDocument()) return false;
+            if (!CloseDocument()) return result;
 
             // Check whether this is a type of file that we support
             if (!IsFileTypeSupported(pathname))
             {
                 OnFileTypeNotSupported();
-                return false;
+                return result;
             }
-
-            var result = false;
 
             // Read the data
             try
