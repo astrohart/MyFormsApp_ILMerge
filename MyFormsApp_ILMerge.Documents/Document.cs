@@ -12,6 +12,21 @@ namespace MyFormsApp_ILMerge.Documents
     public class Document : IDocument
     {
         /// <summary>
+        /// Empty, static constructor to prohibit direct allocation of this class.
+        /// </summary>
+        static Document() { }
+
+        /// <summary>
+        /// Constructs a new instance of
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> and returns a reference
+        /// to it.
+        /// </summary>
+        /// <remarks>
+        /// This empty, protected constructor to prohibit direct allocation of this class.
+        /// </remarks>
+        protected Document() { }
+
+        /// <summary>
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
         /// document has been modified.
         /// </summary>
@@ -28,6 +43,12 @@ namespace MyFormsApp_ILMerge.Documents
         public string FileName { get; private set; }
 
         /// <summary>
+        /// Gets a reference to the one and only instance of
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" />.
+        /// </summary>
+        public static Document Instance { get; } = new Document();
+
+        /// <summary>
         /// Occurs when the document's data has been updated.
         /// </summary>
         /// <remarks>
@@ -37,6 +58,12 @@ namespace MyFormsApp_ILMerge.Documents
         public event EventHandler DataUpdated;
 
         /// <summary>
+        /// Occurs when the user attempts to open a file whose type this document object
+        /// does not support.
+        /// </summary>
+        public event EventHandler FileTypeNotSupported;
+
+        /// <summary>
         /// Specifies whether the document that is currently open may be closed.
         /// </summary>
         /// <returns>
@@ -44,6 +71,25 @@ namespace MyFormsApp_ILMerge.Documents
         /// document; <see langword="false" /> otherwise.
         /// </returns>
         public bool CloseDocument()
+            => throw new NotImplementedException();
+
+        /// <summary>
+        /// Determines whether the document object will open the file with the specified
+        /// <paramref name="pathname" />.
+        /// <para />
+        /// It does this by matching the extension of the file whose
+        /// <paramref name="pathname" /> is provided against a static value.
+        /// </summary>
+        /// <param name="pathname">
+        /// (Required.) A <see cref="T:System.String" /> containing the fully-qualified
+        /// pathname of the file to be checked.
+        /// </param>
+        /// <returns>
+        /// <see langword="true" /> if the type of file specified by the extension
+        /// of <paramref name="pathname" /> is supported; <see langword="false" />
+        /// otherwise.
+        /// </returns>
+        public bool IsFileTypeSupported(string pathname)
             => throw new NotImplementedException();
 
         /// <summary>
@@ -83,6 +129,14 @@ namespace MyFormsApp_ILMerge.Documents
         /// </remarks>
         public void SetFileName(string fileName = "")
             => throw new NotImplementedException();
+
+        /// <summary>
+        /// Raises the
+        /// <see cref="E:MyFormsApp_ILMerge.Documents.Document.FileTypeNotSupported" />
+        /// event.
+        /// </summary>
+        protected virtual void OnFileTypeNotSupported()
+            => FileTypeNotSupported?.Invoke(this, EventArgs.Empty);
 
         /// <summary>
         /// Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DataUpdated" />
