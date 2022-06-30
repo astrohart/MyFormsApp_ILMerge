@@ -40,6 +40,12 @@ namespace MyFormsApp_ILMerge.Documents
         event EventHandler DataUpdated;
 
         /// <summary>
+        /// Occurs when the user attempts to open a file whose type this document object
+        /// does not support.
+        /// </summary>
+        event EventHandler FileTypeNotSupported;
+
+        /// <summary>
         /// Specifies whether the document that is currently open may be closed.
         /// </summary>
         /// <returns>
@@ -47,6 +53,24 @@ namespace MyFormsApp_ILMerge.Documents
         /// document; <see langword="false" /> otherwise.
         /// </returns>
         bool CloseDocument();
+
+        /// <summary>
+        /// Determines whether the document object will open the file with the specified
+        /// <paramref name="pathname" />.
+        /// <para />
+        /// It does this by matching the extension of the file whose
+        /// <paramref name="pathname" /> is provided against a static value.
+        /// </summary>
+        /// <param name="pathname">
+        /// (Required.) A <see cref="T:System.String" /> containing the fully-qualified
+        /// pathname of the file to be checked.
+        /// </param>
+        /// <returns>
+        /// <see langword="true" /> if the type of file specified by the extension
+        /// of <paramref name="pathname" /> is supported; <see langword="false" />
+        /// otherwise.
+        /// </returns>
+        bool IsFileTypeSupported(string pathname);
 
         /// <summary>
         /// Opens a document with the specified <paramref name="pathname" />.
