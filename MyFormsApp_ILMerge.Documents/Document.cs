@@ -83,7 +83,6 @@ namespace MyFormsApp_ILMerge.Documents
             get => _fileContents;
             set
             {
-                SetDirty(!value.Equals(_fileContents));
                 _fileContents = value;
             }
         }
