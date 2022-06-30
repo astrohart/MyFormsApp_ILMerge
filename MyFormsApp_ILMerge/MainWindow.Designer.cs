@@ -122,7 +122,7 @@ namespace MyFormsApp_ILMerge
             this.fileNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileNew.Name = "fileNew";
             this.fileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.fileNew.Size = new System.Drawing.Size(224, 26);
+            this.fileNew.Size = new System.Drawing.Size(181, 26);
             this.fileNew.Text = "&New";
             // 
             // fileOpen
@@ -131,14 +131,14 @@ namespace MyFormsApp_ILMerge
             this.fileOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileOpen.Name = "fileOpen";
             this.fileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.fileOpen.Size = new System.Drawing.Size(224, 26);
+            this.fileOpen.Size = new System.Drawing.Size(181, 26);
             this.fileOpen.Text = "&Open";
             this.fileOpen.Click += new System.EventHandler(this.OnFileOpen);
             // 
             // sep3
             // 
             this.sep3.Name = "sep3";
-            this.sep3.Size = new System.Drawing.Size(221, 6);
+            this.sep3.Size = new System.Drawing.Size(178, 6);
             // 
             // fileSave
             // 
@@ -147,20 +147,20 @@ namespace MyFormsApp_ILMerge
             this.fileSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileSave.Name = "fileSave";
             this.fileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.fileSave.Size = new System.Drawing.Size(224, 26);
+            this.fileSave.Size = new System.Drawing.Size(181, 26);
             this.fileSave.Text = "&Save";
             // 
             // fileSaveAs
             // 
             this.fileSaveAs.Enabled = false;
             this.fileSaveAs.Name = "fileSaveAs";
-            this.fileSaveAs.Size = new System.Drawing.Size(224, 26);
+            this.fileSaveAs.Size = new System.Drawing.Size(181, 26);
             this.fileSaveAs.Text = "Save &As";
             // 
             // sep4
             // 
             this.sep4.Name = "sep4";
-            this.sep4.Size = new System.Drawing.Size(221, 6);
+            this.sep4.Size = new System.Drawing.Size(178, 6);
             // 
             // filePrint
             // 
@@ -169,7 +169,7 @@ namespace MyFormsApp_ILMerge
             this.filePrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrint.Name = "filePrint";
             this.filePrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.filePrint.Size = new System.Drawing.Size(224, 26);
+            this.filePrint.Size = new System.Drawing.Size(181, 26);
             this.filePrint.Text = "&Print";
             // 
             // filePrintPreview
@@ -178,18 +178,18 @@ namespace MyFormsApp_ILMerge
             this.filePrintPreview.Image = ((System.Drawing.Image)(resources.GetObject("filePrintPreview.Image")));
             this.filePrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrintPreview.Name = "filePrintPreview";
-            this.filePrintPreview.Size = new System.Drawing.Size(224, 26);
+            this.filePrintPreview.Size = new System.Drawing.Size(181, 26);
             this.filePrintPreview.Text = "Print Pre&view";
             // 
             // sep5
             // 
             this.sep5.Name = "sep5";
-            this.sep5.Size = new System.Drawing.Size(221, 6);
+            this.sep5.Size = new System.Drawing.Size(178, 6);
             // 
             // fileExit
             // 
             this.fileExit.Name = "fileExit";
-            this.fileExit.Size = new System.Drawing.Size(224, 26);
+            this.fileExit.Size = new System.Drawing.Size(181, 26);
             this.fileExit.Text = "E&xit";
             this.fileExit.Click += new System.EventHandler(this.OnFileExit);
             // 
@@ -286,7 +286,7 @@ namespace MyFormsApp_ILMerge
             this.viewToolbar.CheckOnClick = true;
             this.viewToolbar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewToolbar.Name = "viewToolbar";
-            this.viewToolbar.Size = new System.Drawing.Size(224, 26);
+            this.viewToolbar.Size = new System.Drawing.Size(158, 26);
             this.viewToolbar.Text = "&Toolbar";
             this.viewToolbar.Click += new System.EventHandler(this.OnViewToolbar);
             // 
@@ -296,7 +296,7 @@ namespace MyFormsApp_ILMerge
             this.viewStatusBar.CheckOnClick = true;
             this.viewStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewStatusBar.Name = "viewStatusBar";
-            this.viewStatusBar.Size = new System.Drawing.Size(224, 26);
+            this.viewStatusBar.Size = new System.Drawing.Size(158, 26);
             this.viewStatusBar.Text = "&Status Bar";
             this.viewStatusBar.Click += new System.EventHandler(this.OnViewStatusBar);
             // 
@@ -500,6 +500,7 @@ namespace MyFormsApp_ILMerge
             // fileContentTextBox
             // 
             this.fileContentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fileContentTextBox.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileContentTextBox.Location = new System.Drawing.Point(0, 55);
             this.fileContentTextBox.Multiline = true;
             this.fileContentTextBox.Name = "fileContentTextBox";
