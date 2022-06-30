@@ -1,0 +1,53 @@
+﻿namespace MyFormsApp_ILMerge.Documents
+{
+    /// <summary>
+    /// Defines the publicly-exposed methods and properties of a document object.
+    /// </summary>
+    /// <remarks>
+    /// A document object serves to manage the exchange of data between a file
+    /// on the disk and a view that displays the data.
+    /// </remarks>
+    public interface IDocument
+    {
+        /// <summary>
+        /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
+        /// document has been modified.
+        /// </summary>
+        bool Dirty { get; }
+
+        /// <summary>
+        /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
+        /// pathname of the file that is currently open.
+        /// </summary>
+        /// <remarks>
+        /// If the value of this property is <see langword="null" /> or the empty
+        /// string, then no document is loaded, or the user is working on a new document.
+        /// </remarks>
+        string FileName { get; }
+
+        /// <summary>
+        /// Sets the value of the
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.Dirty" /> property.
+        /// </summary>
+        /// <param name="dirty">
+        /// (Optional.)  Default is <see langword="true" />.  Set to
+        /// <see langword="true" /> to mark the document as dirty; <see langword="false" />
+        /// otherwise.
+        /// </param>
+        void SetDirty(bool dirty = true);
+
+        /// <summary>
+        /// Sets the value of the
+        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.FileName" /> property.
+        /// </summary>
+        /// <param name="fileName">
+        /// (Optional.) String containing the fully-qualified
+        /// pathname of the document that is currently open.
+        /// </param>
+        /// <remarks>
+        /// Set the value of the <paramref name="fileName" /> parameter to the
+        /// blank string (the default) in order to mark this as a new document.
+        /// </remarks>
+        void SetFileName(string fileName = "");
+    }
+}
