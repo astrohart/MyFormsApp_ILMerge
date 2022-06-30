@@ -13,5 +13,25 @@ namespace MyFormsApp_ILMerge
         /// </summary>
         public MainWindow()
             => InitializeComponent();
+
+        private void OnFileExit(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void OnFileOpen(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void OnViewToolbar(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void OnViewStatusBar(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
