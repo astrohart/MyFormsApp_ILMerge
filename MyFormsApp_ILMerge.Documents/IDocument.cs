@@ -8,6 +8,9 @@ namespace MyFormsApp_ILMerge.Documents
     /// <remarks>
     /// A document object serves to manage the exchange of data between a file
     /// on the disk and a view that displays the data.
+    /// <para />
+    /// Shoutout to Chris Sells, and his book, "Windows Forms 2.0 Programming," for
+    /// inspiring the design of this interface.
     /// </remarks>
     public interface IDocument
     {
@@ -35,6 +38,25 @@ namespace MyFormsApp_ILMerge.Documents
         /// need to update themselves to display the most recent data.
         /// </remarks>
         event EventHandler DataUpdated;
+
+        /// <summary>
+        /// Specifies whether the document that is currently open may be closed.
+        /// </summary>
+        /// <returns>
+        /// <see langword="true" /> if the user can close the currently-open
+        /// document; <see langword="false" /> otherwise.
+        /// </returns>
+        bool CloseDocument();
+
+        /// <summary>
+        /// Opens a document with the specified <paramref name="pathname" />.
+        /// </summary>
+        /// <param name="pathname">
+        /// (Required.) A <see cref="T:System.String" /> containing the fully-qualified
+        /// pathname of the file to be opened.
+        /// </param>
+        /// <returns></returns>
+        bool OpenDocument(string pathname);
 
         /// <summary>
         /// Sets the value of the
