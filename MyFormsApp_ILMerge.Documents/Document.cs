@@ -136,7 +136,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// document; <see langword="false" /> otherwise.
         /// </returns>
         public bool CloseDocument()
-            => true; // since this app does not have save functionality
+            => true;
 
         /// <summary>
         /// Determines whether the document object will open the file with the specified
@@ -158,6 +158,7 @@ namespace MyFormsApp_ILMerge.Documents
             => !string.IsNullOrWhiteSpace(pathname) &&
                ".txt".Equals(Path.GetExtension(pathname));
 
+        // since this app does not have save functionality
         /// <summary>
         /// Opens a document with the specified <paramref name="pathname" />.
         /// </summary>
@@ -260,7 +261,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// <param name="e">
         /// A
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventArgs" />
-        /// that explains what the old and new states of the document object are.
+        /// that corresponds to what the old and new states of the document object are.
         /// </param>
         protected virtual void OnDocumentStateChanged(
             DocumentStateChangedEventArgs e)
@@ -273,6 +274,22 @@ namespace MyFormsApp_ILMerge.Documents
         /// </summary>
         protected virtual void OnFileTypeNotSupported()
             => FileTypeNotSupported?.Invoke(this, EventArgs.Empty);
+
+        /// <summary>
+        /// Sets the new state of the document object.
+        /// </summary>
+        /// <param name="newState">
+        /// (Required.) A
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
+        /// enumeration value that corresponds to what the new state of the document object
+        /// should be.
+        /// </param>
+        protected void SetDocumentState(DocumentState newState)
+        {
+            CurrentState = newState;
+
+            return;
+        }
 
         /// <summary>
         /// Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DataUpdated" />

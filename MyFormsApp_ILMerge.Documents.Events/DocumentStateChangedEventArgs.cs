@@ -16,12 +16,14 @@ namespace MyFormsApp_ILMerge.Documents.Events
         /// <param name="newState">
         /// (Required.) The
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration value that explains what the new state of the document object is.
+        /// enumeration value that corresponds to what the new state of the document object
+        /// is.
         /// </param>
         /// <param name="oldState">
         /// (Required.) The
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration value that explains what the old state of the document object is.
+        /// enumeration value that corresponds to what the old state of the document object
+        /// is.
         /// </param>
         public DocumentStateChangedEventArgs(DocumentState newState,
             DocumentState oldState)
@@ -32,13 +34,15 @@ namespace MyFormsApp_ILMerge.Documents.Events
 
         /// <summary>
         /// Gets the <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration value that explains what the new state of the document object is.
+        /// enumeration value that corresponds to what the new state of the document object
+        /// is.
         /// </summary>
         public DocumentState NewState { get; }
 
         /// <summary>
         /// Gets the <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration value that explains what state the document object used to be in.
+        /// enumeration value that corresponds to what state the document object used to be
+        /// in.
         /// </summary>
         public DocumentState OldState { get; }
     }
