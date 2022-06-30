@@ -122,7 +122,23 @@ namespace MyFormsApp_ILMerge.Documents
         /// </param>
         /// <returns></returns>
         public bool OpenDocument(string pathname)
-            => throw new NotImplementedException();
+        {
+            // Check if we can close the current file
+            if (!CloseDocument()) return false;
+
+            // Check whether this is a type of file that we support
+            if (!IsFileTypeSupported(pathname))
+            {
+                OnFileTypeNotSupported();
+                return false;
+            }
+
+            var result = false;
+
+            // TODO: Add code here to implement File -> Open.
+
+            return result;
+        }
 
         /// <summary>
         /// Sets the value of the
