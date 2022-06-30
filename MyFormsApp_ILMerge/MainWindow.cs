@@ -67,7 +67,7 @@ namespace MyFormsApp_ILMerge
 
             Text = string.IsNullOrWhiteSpace(Document.FileName)
                 ? $"Untitled - {Application.ProductName}"
-                : $"{Document.FileName}{(Document.Dirty ? "*" : ")$")} - {Application.ProductName}";
+                : $"{Path.GetFileName(Document.FileName)}{(Document.Dirty ? "*" : "")} - {Application.ProductName}";
         }
 
         /// <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary>
