@@ -8,6 +8,7 @@
   - [_fileContents](#F-MyFormsApp_ILMerge-Documents-Document-_fileContents 'MyFormsApp_ILMerge.Documents.Document._fileContents')
   - [CurrentState](#P-MyFormsApp_ILMerge-Documents-Document-CurrentState 'MyFormsApp_ILMerge.Documents.Document.CurrentState')
   - [Dirty](#P-MyFormsApp_ILMerge-Documents-Document-Dirty 'MyFormsApp_ILMerge.Documents.Document.Dirty')
+  - [DocTemplate](#P-MyFormsApp_ILMerge-Documents-Document-DocTemplate 'MyFormsApp_ILMerge.Documents.Document.DocTemplate')
   - [FileContents](#P-MyFormsApp_ILMerge-Documents-Document-FileContents 'MyFormsApp_ILMerge.Documents.Document.FileContents')
   - [FileName](#P-MyFormsApp_ILMerge-Documents-Document-FileName 'MyFormsApp_ILMerge.Documents.Document.FileName')
   - [Instance](#P-MyFormsApp_ILMerge-Documents-Document-Instance 'MyFormsApp_ILMerge.Documents.Document.Instance')
@@ -83,6 +84,16 @@ enumeration values that explain what state the document object is in.
 
 Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether this
 document has been modified.
+
+<a name='P-MyFormsApp_ILMerge-Documents-Document-DocTemplate'></a>
+### DocTemplate `property`
+
+##### Summary
+
+Gets or sets a reference to an instance of an object that implements the
+[IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate') interface
+and which plays the role of the document template that "owns" this document
+object.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-FileContents'></a>
 ### FileContents `property`
