@@ -15,6 +15,10 @@ namespace MyFormsApp_ILMerge.Documents
     /// </remarks>
     public class Document : IDocument
     {
+        /// <summary>
+        /// A <see cref="T:System.String" /> that holds the contents of the file that is
+        /// currently open.
+        /// </summary>
         private string _fileContents;
 
         /// <summary>
@@ -146,7 +150,34 @@ namespace MyFormsApp_ILMerge.Documents
 
             var result = false;
 
-            // TODO: Add code here to implement File -> Open.
+            // Read the data
+            try
+            {
+                // Clear existing data
+                FileContents = string.Empty;
+
+                // Load the new data from the file with the specified pathname
+                FileContents = TextFileModel.LoadFrom(pathname);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+
+                result = false;
+            }
+
+            // Updating the value of the FileContents property above
+            // has the effect of setting the Dirty flag to true and
+            // updating all the views.
+
+            // For a newly-opened document, it's not dirty, so set the
+            // value to false instead.  But do this ONLY if the Open
+            // operation actually worked!
+
+            if (!result) return result;
+
+            SetDirty(false);
+            SetFileName(pathname);
 
             return result;
         }
