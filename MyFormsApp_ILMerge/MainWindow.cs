@@ -80,6 +80,7 @@ namespace MyFormsApp_ILMerge
             base.OnLoad(e);
 
             Document.DataUpdated += OnDocumentDataUpdated;
+            Document.DocTemplate = this;
 
             ResetFileContentTextBox();
         }

@@ -110,7 +110,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// and which plays the role of the document template that "owns" this document
         /// object.
         /// </summary>
-        public IDocTemplate Template { get; set; }
+        public IDocTemplate DocTemplate { get; set; }
 
         /// <summary>
         /// Gets a reference to an instance of the object that implements the

@@ -50,7 +50,7 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// and which plays the role of the document template that "owns" this document
         /// object.
         /// </summary>
-        IDocTemplate Template { get; set; }
+        IDocTemplate DocTemplate { get; set; }
 
         /// <summary>
         /// Occurs when the document's data has been updated.
