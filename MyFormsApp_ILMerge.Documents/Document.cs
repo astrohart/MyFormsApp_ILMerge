@@ -132,7 +132,10 @@ namespace MyFormsApp_ILMerge.Documents
         /// otherwise.
         /// </param>
         public void SetDirty(bool dirty = true)
-            => throw new NotImplementedException();
+        {
+            Dirty = dirty;
+            UpdateAllViews();
+        }
 
         /// <summary>
         /// Sets the value of the
