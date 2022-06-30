@@ -520,6 +520,7 @@ namespace MyFormsApp_ILMerge
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenu;
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ILMerge Demo Application";
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
