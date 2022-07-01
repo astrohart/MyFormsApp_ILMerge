@@ -38,6 +38,6 @@
     "TargetKind": null,
     "UnionMerge": false,
     "Version": null,
-    "XmlDocumentation": false
+    "XmlDocumentation": true
   }
 }
