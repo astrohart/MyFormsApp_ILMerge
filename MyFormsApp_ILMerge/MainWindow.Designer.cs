@@ -29,6 +29,7 @@ namespace MyFormsApp_ILMerge
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,9 +79,11 @@ namespace MyFormsApp_ILMerge
             this.messageLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileContentTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.fileContentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenu.SuspendLayout();
             this.standardToolStrip.SuspendLayout();
             this.statusBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileContentsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -499,6 +502,7 @@ namespace MyFormsApp_ILMerge
             // 
             // fileContentTextBox
             // 
+            this.fileContentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fileContentsBindingSource, "FileContents", true));
             this.fileContentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fileContentTextBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileContentTextBox.Location = new System.Drawing.Point(0, 55);
@@ -514,6 +518,10 @@ namespace MyFormsApp_ILMerge
             this.openFileDialog.FileName = "*.txt";
             this.openFileDialog.Filter = "Text Document (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Title = "Open File";
+            // 
+            // fileContentsBindingSource
+            // 
+            this.fileContentsBindingSource.DataSource = typeof(MyFormsApp_ILMerge.Documents.Interfaces.IDocument);
             // 
             // MainWindow
             // 
@@ -536,6 +544,7 @@ namespace MyFormsApp_ILMerge
             this.standardToolStrip.PerformLayout();
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileContentsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,6 +600,7 @@ namespace MyFormsApp_ILMerge
         private System.Windows.Forms.ToolStripStatusLabel messageLabel;
         private System.Windows.Forms.TextBox fileContentTextBox;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.BindingSource fileContentsBindingSource;
     }
 }
 

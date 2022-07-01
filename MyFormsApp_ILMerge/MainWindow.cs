@@ -91,6 +91,8 @@ namespace MyFormsApp_ILMerge
             Document.DocTemplate = this;
 
             ResetFileContentTextBox();
+
+            fileContentsBindingSource.DataSource = Document;
         }
 
         private void OnDocumentDataUpdated(object sender, EventArgs e)
@@ -98,7 +100,8 @@ namespace MyFormsApp_ILMerge
             SetCaption();
             ResetFileContentTextBox();
 
-            fileContentTextBox.Text = Document.FileContents;
+            //fileContentsBindingSource.DataSource = Document;
+            fileContentsBindingSource.ResetBindings(false);
         }
 
         private void OnFileExit(object sender, EventArgs e)

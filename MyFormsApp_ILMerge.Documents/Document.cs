@@ -201,7 +201,11 @@ namespace MyFormsApp_ILMerge.Documents
                 result = new FileInfo(pathname).Length == 0 ||
                          !string.IsNullOrEmpty(FileContents);
 
-                if (result) SetDocumentState(DocumentState.Opened);
+                if (result)
+                {
+                    SetDocumentState(DocumentState.Opened);
+                    UpdateAllViews();
+                }
             }
             catch (Exception ex)
             {
@@ -244,7 +248,7 @@ namespace MyFormsApp_ILMerge.Documents
         public void SetDirty(bool dirty = true)
         {
             Dirty = dirty;
-            UpdateAllViews();
+            DocTemplate.SetCaption();
         }
 
         /// <summary>
@@ -262,7 +266,7 @@ namespace MyFormsApp_ILMerge.Documents
         public void SetFileName(string fileName = "")
         {
             FileName = fileName;
-            UpdateAllViews();
+            DocTemplate.SetCaption();
         }
 
         /// <summary>
