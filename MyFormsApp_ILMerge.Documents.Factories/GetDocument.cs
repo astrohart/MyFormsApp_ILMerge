@@ -1,4 +1,5 @@
 ﻿using MyFormsApp_ILMerge.Documents.Interfaces;
+using PostSharp.Patterns.Diagnostics;
 
 namespace MyFormsApp_ILMerge.Documents.Factories
 {
@@ -6,6 +7,7 @@ namespace MyFormsApp_ILMerge.Documents.Factories
     /// Provides access to the one and only instance of the object that implements the
     /// <see cref="T:MyFormsApp_ILMerge.Documents.IDocument" /> interface.
     /// </summary>
+    [Log(AttributeExclude = true)]
     public static class GetDocument
     {
         /// <summary>
