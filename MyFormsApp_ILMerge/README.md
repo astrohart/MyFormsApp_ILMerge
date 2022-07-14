@@ -14,6 +14,7 @@
   - [SetCaption()](#M-MyFormsApp_ILMerge-MainWindow-SetCaption 'MyFormsApp_ILMerge.MainWindow.SetCaption')
 - [Program](#T-MyFormsApp_ILMerge-Program 'MyFormsApp_ILMerge.Program')
   - [Main()](#M-MyFormsApp_ILMerge-Program-Main 'MyFormsApp_ILMerge.Program.Main')
+  - [SetProcessDPIAware()](#M-MyFormsApp_ILMerge-Program-SetProcessDPIAware 'MyFormsApp_ILMerge.Program.SetProcessDPIAware')
 - [Resources](#T-MyFormsApp_ILMerge-Properties-Resources 'MyFormsApp_ILMerge.Properties.Resources')
   - [Culture](#P-MyFormsApp_ILMerge-Properties-Resources-Culture 'MyFormsApp_ILMerge.Properties.Resources.Culture')
   - [ResourceManager](#P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager 'MyFormsApp_ILMerge.Properties.Resources.ResourceManager')
@@ -137,6 +138,25 @@ Defines the behaviors of the application.
 ##### Summary
 
 The main entry point for the application.
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-MyFormsApp_ILMerge-Program-SetProcessDPIAware'></a>
+### SetProcessDPIAware() `method`
+
+##### Summary
+
+Sets the process-default DPI awareness to system-DPI awareness. This is
+equivalent to calling `SetProcessDpiAwarenessContext` with a
+`DPI_AWARENESS_CONTEXT` value of `DPI_AWARENESS_CONTEXT_SYSTEM_AWARE`
+.
+
+##### Returns
+
+If the function succeeds, the return value is nonzero. Otherwise, the
+return value is zero.
 
 ##### Parameters
 
