@@ -19,7 +19,6 @@ namespace MyFormsApp_ILMerge
         [STAThread]
         public static void Main()
         {
-            SetProcessDPIAware();
 
             LogFileManager.InitializeLogging(
                 false, true,
@@ -30,6 +29,8 @@ namespace MyFormsApp_ILMerge
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            SetProcessDpiAwareness((int)DpiAwareness.PerMonitorAware);
+
             Application.SetUnhandledExceptionMode(
                 UnhandledExceptionMode.CatchException
             );
@@ -37,19 +38,6 @@ namespace MyFormsApp_ILMerge
 
             Application.Run(new MainWindow());
         }
-
-        /// <summary>
-        /// Sets the process-default DPI awareness to system-DPI awareness. This is
-        /// equivalent to calling <c>SetProcessDpiAwarenessContext</c> with a
-        /// <c>DPI_AWARENESS_CONTEXT</c> value of <c>DPI_AWARENESS_CONTEXT_SYSTEM_AWARE</c>
-        /// .
-        /// </summary>
-        /// <returns>
-        /// If the function succeeds, the return value is nonzero. Otherwise, the
-        /// return value is zero.
-        /// </returns>
-        [DllImport("user32.dll")]
-        public static extern bool SetProcessDPIAware();
 
         private static void OnThreadException(object sender,
             ThreadExceptionEventArgs e)
@@ -62,6 +50,18 @@ namespace MyFormsApp_ILMerge
 
             // dump all the exception info to the log
             DebugUtils.LogException(e.Exception);
+        }
+
+        [DllImport("Shcore.dll")]
+        private static extern int SetProcessDpiAwareness(
+            int PROCESS_DPI_AWARENESS);
+
+        // According to https://msdn.microsoft.com/en-us/library/windows/desktop/dn280512(v=vs.85).aspx
+        private enum DpiAwareness
+        {
+            None = 0,
+            SystemAware = 1,
+            PerMonitorAware = 2
         }
     }
 }
