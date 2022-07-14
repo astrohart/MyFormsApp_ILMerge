@@ -65,21 +65,21 @@ namespace MyFormsApp_ILMerge
             this.sep8 = new System.Windows.Forms.ToolStripSeparator();
             this.helpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.standardToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fileNewButton = new System.Windows.Forms.ToolStripButton();
-            this.fileOpenButton = new System.Windows.Forms.ToolStripButton();
-            this.fileSaveButton = new System.Windows.Forms.ToolStripButton();
-            this.filePrintButton = new System.Windows.Forms.ToolStripButton();
-            this.sep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editCutButton = new System.Windows.Forms.ToolStripButton();
-            this.editCopyButton = new System.Windows.Forms.ToolStripButton();
-            this.editPasteButton = new System.Windows.Forms.ToolStripButton();
-            this.sep2 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpAboutButton = new System.Windows.Forms.ToolStripButton();
             this.statusBar = new System.Windows.Forms.StatusStrip();
             this.messageLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileContentTextBox = new System.Windows.Forms.TextBox();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.fileContentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.helpAboutButton = new System.Windows.Forms.ToolStripButton();
+            this.sep2 = new System.Windows.Forms.ToolStripSeparator();
+            this.editPasteButton = new System.Windows.Forms.ToolStripButton();
+            this.editCopyButton = new System.Windows.Forms.ToolStripButton();
+            this.editCutButton = new System.Windows.Forms.ToolStripButton();
+            this.sep1 = new System.Windows.Forms.ToolStripSeparator();
+            this.filePrintButton = new System.Windows.Forms.ToolStripButton();
+            this.fileSaveButton = new System.Windows.Forms.ToolStripButton();
+            this.fileOpenButton = new System.Windows.Forms.ToolStripButton();
+            this.fileNewButton = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.standardToolStrip.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -97,7 +97,8 @@ namespace MyFormsApp_ILMerge
             this.helpMenu});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(928, 28);
+            this.mainMenu.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.mainMenu.Size = new System.Drawing.Size(742, 24);
             this.mainMenu.TabIndex = 0;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -115,7 +116,7 @@ namespace MyFormsApp_ILMerge
             this.sep5,
             this.fileExit});
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(46, 24);
+            this.fileMenu.Size = new System.Drawing.Size(37, 20);
             this.fileMenu.Text = "&File";
             // 
             // fileNew
@@ -125,7 +126,7 @@ namespace MyFormsApp_ILMerge
             this.fileNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileNew.Name = "fileNew";
             this.fileNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.fileNew.Size = new System.Drawing.Size(181, 26);
+            this.fileNew.Size = new System.Drawing.Size(150, 26);
             this.fileNew.Text = "&New";
             // 
             // fileOpen
@@ -134,14 +135,14 @@ namespace MyFormsApp_ILMerge
             this.fileOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileOpen.Name = "fileOpen";
             this.fileOpen.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.fileOpen.Size = new System.Drawing.Size(181, 26);
+            this.fileOpen.Size = new System.Drawing.Size(150, 26);
             this.fileOpen.Text = "&Open";
             this.fileOpen.Click += new System.EventHandler(this.OnFileOpen);
             // 
             // sep3
             // 
             this.sep3.Name = "sep3";
-            this.sep3.Size = new System.Drawing.Size(178, 6);
+            this.sep3.Size = new System.Drawing.Size(147, 6);
             // 
             // fileSave
             // 
@@ -150,20 +151,20 @@ namespace MyFormsApp_ILMerge
             this.fileSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fileSave.Name = "fileSave";
             this.fileSave.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.fileSave.Size = new System.Drawing.Size(181, 26);
+            this.fileSave.Size = new System.Drawing.Size(150, 26);
             this.fileSave.Text = "&Save";
             // 
             // fileSaveAs
             // 
             this.fileSaveAs.Enabled = false;
             this.fileSaveAs.Name = "fileSaveAs";
-            this.fileSaveAs.Size = new System.Drawing.Size(181, 26);
+            this.fileSaveAs.Size = new System.Drawing.Size(150, 26);
             this.fileSaveAs.Text = "Save &As";
             // 
             // sep4
             // 
             this.sep4.Name = "sep4";
-            this.sep4.Size = new System.Drawing.Size(178, 6);
+            this.sep4.Size = new System.Drawing.Size(147, 6);
             // 
             // filePrint
             // 
@@ -172,7 +173,7 @@ namespace MyFormsApp_ILMerge
             this.filePrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrint.Name = "filePrint";
             this.filePrint.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.filePrint.Size = new System.Drawing.Size(181, 26);
+            this.filePrint.Size = new System.Drawing.Size(150, 26);
             this.filePrint.Text = "&Print";
             // 
             // filePrintPreview
@@ -181,18 +182,18 @@ namespace MyFormsApp_ILMerge
             this.filePrintPreview.Image = ((System.Drawing.Image)(resources.GetObject("filePrintPreview.Image")));
             this.filePrintPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.filePrintPreview.Name = "filePrintPreview";
-            this.filePrintPreview.Size = new System.Drawing.Size(181, 26);
+            this.filePrintPreview.Size = new System.Drawing.Size(150, 26);
             this.filePrintPreview.Text = "Print Pre&view";
             // 
             // sep5
             // 
             this.sep5.Name = "sep5";
-            this.sep5.Size = new System.Drawing.Size(178, 6);
+            this.sep5.Size = new System.Drawing.Size(147, 6);
             // 
             // fileExit
             // 
             this.fileExit.Name = "fileExit";
-            this.fileExit.Size = new System.Drawing.Size(181, 26);
+            this.fileExit.Size = new System.Drawing.Size(150, 26);
             this.fileExit.Text = "E&xit";
             this.fileExit.Click += new System.EventHandler(this.OnFileExit);
             // 
@@ -208,7 +209,7 @@ namespace MyFormsApp_ILMerge
             this.sep7,
             this.editSelectAll});
             this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(49, 24);
+            this.editMenu.Size = new System.Drawing.Size(39, 20);
             this.editMenu.Text = "&Edit";
             // 
             // editUndo
@@ -216,7 +217,7 @@ namespace MyFormsApp_ILMerge
             this.editUndo.Enabled = false;
             this.editUndo.Name = "editUndo";
             this.editUndo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.editUndo.Size = new System.Drawing.Size(179, 26);
+            this.editUndo.Size = new System.Drawing.Size(148, 26);
             this.editUndo.Text = "&Undo";
             // 
             // editRedo
@@ -224,13 +225,13 @@ namespace MyFormsApp_ILMerge
             this.editRedo.Enabled = false;
             this.editRedo.Name = "editRedo";
             this.editRedo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.editRedo.Size = new System.Drawing.Size(179, 26);
+            this.editRedo.Size = new System.Drawing.Size(148, 26);
             this.editRedo.Text = "&Redo";
             // 
             // sep6
             // 
             this.sep6.Name = "sep6";
-            this.sep6.Size = new System.Drawing.Size(176, 6);
+            this.sep6.Size = new System.Drawing.Size(145, 6);
             // 
             // editCut
             // 
@@ -239,7 +240,7 @@ namespace MyFormsApp_ILMerge
             this.editCut.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editCut.Name = "editCut";
             this.editCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.editCut.Size = new System.Drawing.Size(179, 26);
+            this.editCut.Size = new System.Drawing.Size(148, 26);
             this.editCut.Text = "Cu&t";
             // 
             // editCopy
@@ -249,7 +250,7 @@ namespace MyFormsApp_ILMerge
             this.editCopy.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editCopy.Name = "editCopy";
             this.editCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.editCopy.Size = new System.Drawing.Size(179, 26);
+            this.editCopy.Size = new System.Drawing.Size(148, 26);
             this.editCopy.Text = "&Copy";
             // 
             // editPaste
@@ -259,19 +260,19 @@ namespace MyFormsApp_ILMerge
             this.editPaste.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editPaste.Name = "editPaste";
             this.editPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.editPaste.Size = new System.Drawing.Size(179, 26);
+            this.editPaste.Size = new System.Drawing.Size(148, 26);
             this.editPaste.Text = "&Paste";
             // 
             // sep7
             // 
             this.sep7.Name = "sep7";
-            this.sep7.Size = new System.Drawing.Size(176, 6);
+            this.sep7.Size = new System.Drawing.Size(145, 6);
             // 
             // editSelectAll
             // 
             this.editSelectAll.Enabled = false;
             this.editSelectAll.Name = "editSelectAll";
-            this.editSelectAll.Size = new System.Drawing.Size(179, 26);
+            this.editSelectAll.Size = new System.Drawing.Size(148, 26);
             this.editSelectAll.Text = "Select &All";
             // 
             // viewMenu
@@ -280,7 +281,7 @@ namespace MyFormsApp_ILMerge
             this.viewToolbar,
             this.viewStatusBar});
             this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(55, 24);
+            this.viewMenu.Size = new System.Drawing.Size(44, 20);
             this.viewMenu.Text = "&View";
             // 
             // viewToolbar
@@ -289,7 +290,7 @@ namespace MyFormsApp_ILMerge
             this.viewToolbar.CheckOnClick = true;
             this.viewToolbar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewToolbar.Name = "viewToolbar";
-            this.viewToolbar.Size = new System.Drawing.Size(158, 26);
+            this.viewToolbar.Size = new System.Drawing.Size(126, 22);
             this.viewToolbar.Text = "&Toolbar";
             this.viewToolbar.Click += new System.EventHandler(this.OnViewToolbar);
             // 
@@ -299,7 +300,7 @@ namespace MyFormsApp_ILMerge
             this.viewStatusBar.CheckOnClick = true;
             this.viewStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewStatusBar.Name = "viewStatusBar";
-            this.viewStatusBar.Size = new System.Drawing.Size(158, 26);
+            this.viewStatusBar.Size = new System.Drawing.Size(126, 22);
             this.viewStatusBar.Text = "&Status Bar";
             this.viewStatusBar.Click += new System.EventHandler(this.OnViewStatusBar);
             // 
@@ -309,21 +310,21 @@ namespace MyFormsApp_ILMerge
             this.toolsCustomize,
             this.toolsOptions});
             this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(58, 24);
+            this.toolsMenu.Size = new System.Drawing.Size(46, 20);
             this.toolsMenu.Text = "&Tools";
             // 
             // toolsCustomize
             // 
             this.toolsCustomize.Enabled = false;
             this.toolsCustomize.Name = "toolsCustomize";
-            this.toolsCustomize.Size = new System.Drawing.Size(161, 26);
+            this.toolsCustomize.Size = new System.Drawing.Size(130, 22);
             this.toolsCustomize.Text = "&Customize";
             // 
             // toolsOptions
             // 
             this.toolsOptions.Enabled = false;
             this.toolsOptions.Name = "toolsOptions";
-            this.toolsOptions.Size = new System.Drawing.Size(161, 26);
+            this.toolsOptions.Size = new System.Drawing.Size(130, 22);
             this.toolsOptions.Text = "&Options";
             // 
             // helpMenu
@@ -335,40 +336,40 @@ namespace MyFormsApp_ILMerge
             this.sep8,
             this.helpAbout});
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(55, 24);
+            this.helpMenu.Size = new System.Drawing.Size(44, 20);
             this.helpMenu.Text = "&Help";
             // 
             // helpContents
             // 
             this.helpContents.Enabled = false;
             this.helpContents.Name = "helpContents";
-            this.helpContents.Size = new System.Drawing.Size(150, 26);
+            this.helpContents.Size = new System.Drawing.Size(122, 22);
             this.helpContents.Text = "&Contents";
             // 
             // helpIndex
             // 
             this.helpIndex.Enabled = false;
             this.helpIndex.Name = "helpIndex";
-            this.helpIndex.Size = new System.Drawing.Size(150, 26);
+            this.helpIndex.Size = new System.Drawing.Size(122, 22);
             this.helpIndex.Text = "&Index";
             // 
             // helpSearch
             // 
             this.helpSearch.Enabled = false;
             this.helpSearch.Name = "helpSearch";
-            this.helpSearch.Size = new System.Drawing.Size(150, 26);
+            this.helpSearch.Size = new System.Drawing.Size(122, 22);
             this.helpSearch.Text = "&Search";
             // 
             // sep8
             // 
             this.sep8.Name = "sep8";
-            this.sep8.Size = new System.Drawing.Size(147, 6);
+            this.sep8.Size = new System.Drawing.Size(119, 6);
             // 
             // helpAbout
             // 
             this.helpAbout.Enabled = false;
             this.helpAbout.Name = "helpAbout";
-            this.helpAbout.Size = new System.Drawing.Size(150, 26);
+            this.helpAbout.Size = new System.Drawing.Size(122, 22);
             this.helpAbout.Text = "&About...";
             // 
             // standardToolStrip
@@ -385,117 +386,29 @@ namespace MyFormsApp_ILMerge
             this.editPasteButton,
             this.sep2,
             this.helpAboutButton});
-            this.standardToolStrip.Location = new System.Drawing.Point(0, 28);
+            this.standardToolStrip.Location = new System.Drawing.Point(0, 24);
             this.standardToolStrip.Name = "standardToolStrip";
-            this.standardToolStrip.Size = new System.Drawing.Size(928, 27);
+            this.standardToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.standardToolStrip.Size = new System.Drawing.Size(742, 27);
             this.standardToolStrip.TabIndex = 1;
             this.standardToolStrip.Text = "toolStrip1";
-            // 
-            // fileNewButton
-            // 
-            this.fileNewButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.fileNewButton.Enabled = false;
-            this.fileNewButton.Image = ((System.Drawing.Image)(resources.GetObject("fileNewButton.Image")));
-            this.fileNewButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.fileNewButton.Name = "fileNewButton";
-            this.fileNewButton.Size = new System.Drawing.Size(29, 24);
-            this.fileNewButton.Text = "&New";
-            // 
-            // fileOpenButton
-            // 
-            this.fileOpenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.fileOpenButton.Image = ((System.Drawing.Image)(resources.GetObject("fileOpenButton.Image")));
-            this.fileOpenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.fileOpenButton.Name = "fileOpenButton";
-            this.fileOpenButton.Size = new System.Drawing.Size(29, 24);
-            this.fileOpenButton.Text = "&Open";
-            this.fileOpenButton.Click += new System.EventHandler(this.OnFileOpen);
-            // 
-            // fileSaveButton
-            // 
-            this.fileSaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.fileSaveButton.Enabled = false;
-            this.fileSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("fileSaveButton.Image")));
-            this.fileSaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.fileSaveButton.Name = "fileSaveButton";
-            this.fileSaveButton.Size = new System.Drawing.Size(29, 24);
-            this.fileSaveButton.Text = "&Save";
-            // 
-            // filePrintButton
-            // 
-            this.filePrintButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.filePrintButton.Enabled = false;
-            this.filePrintButton.Image = ((System.Drawing.Image)(resources.GetObject("filePrintButton.Image")));
-            this.filePrintButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.filePrintButton.Name = "filePrintButton";
-            this.filePrintButton.Size = new System.Drawing.Size(29, 24);
-            this.filePrintButton.Text = "&Print";
-            // 
-            // sep1
-            // 
-            this.sep1.Name = "sep1";
-            this.sep1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // editCutButton
-            // 
-            this.editCutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editCutButton.Enabled = false;
-            this.editCutButton.Image = ((System.Drawing.Image)(resources.GetObject("editCutButton.Image")));
-            this.editCutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.editCutButton.Name = "editCutButton";
-            this.editCutButton.Size = new System.Drawing.Size(29, 24);
-            this.editCutButton.Text = "C&ut";
-            // 
-            // editCopyButton
-            // 
-            this.editCopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editCopyButton.Enabled = false;
-            this.editCopyButton.Image = ((System.Drawing.Image)(resources.GetObject("editCopyButton.Image")));
-            this.editCopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.editCopyButton.Name = "editCopyButton";
-            this.editCopyButton.Size = new System.Drawing.Size(29, 24);
-            this.editCopyButton.Text = "&Copy";
-            // 
-            // editPasteButton
-            // 
-            this.editPasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editPasteButton.Enabled = false;
-            this.editPasteButton.Image = ((System.Drawing.Image)(resources.GetObject("editPasteButton.Image")));
-            this.editPasteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.editPasteButton.Name = "editPasteButton";
-            this.editPasteButton.Size = new System.Drawing.Size(29, 24);
-            this.editPasteButton.Text = "&Paste";
-            // 
-            // sep2
-            // 
-            this.sep2.Name = "sep2";
-            this.sep2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // helpAboutButton
-            // 
-            this.helpAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.helpAboutButton.Enabled = false;
-            this.helpAboutButton.Image = ((System.Drawing.Image)(resources.GetObject("helpAboutButton.Image")));
-            this.helpAboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.helpAboutButton.Name = "helpAboutButton";
-            this.helpAboutButton.Size = new System.Drawing.Size(29, 24);
-            this.helpAboutButton.Text = "He&lp";
             // 
             // statusBar
             // 
             this.statusBar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.messageLabel});
-            this.statusBar.Location = new System.Drawing.Point(0, 520);
+            this.statusBar.Location = new System.Drawing.Point(0, 415);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(928, 26);
+            this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 11, 0);
+            this.statusBar.Size = new System.Drawing.Size(742, 22);
             this.statusBar.TabIndex = 2;
             this.statusBar.Text = "statusStrip1";
             // 
             // messageLabel
             // 
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(913, 20);
+            this.messageLabel.Size = new System.Drawing.Size(730, 17);
             this.messageLabel.Spring = true;
             this.messageLabel.Text = "Ready";
             this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -505,12 +418,17 @@ namespace MyFormsApp_ILMerge
             this.fileContentTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fileContentsBindingSource, "FileContents", true));
             this.fileContentTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fileContentTextBox.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fileContentTextBox.Location = new System.Drawing.Point(0, 55);
+            this.fileContentTextBox.Location = new System.Drawing.Point(0, 51);
+            this.fileContentTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fileContentTextBox.Multiline = true;
             this.fileContentTextBox.Name = "fileContentTextBox";
             this.fileContentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.fileContentTextBox.Size = new System.Drawing.Size(928, 465);
+            this.fileContentTextBox.Size = new System.Drawing.Size(742, 364);
             this.fileContentTextBox.TabIndex = 3;
+            // 
+            // fileContentsBindingSource
+            // 
+            this.fileContentsBindingSource.DataSource = typeof(MyFormsApp_ILMerge.Documents.Interfaces.IDocument);
             // 
             // openFileDialog
             // 
@@ -519,15 +437,101 @@ namespace MyFormsApp_ILMerge
             this.openFileDialog.Filter = "Text Document (*.txt)|*.txt|All Files (*.*)|*.*";
             this.openFileDialog.Title = "Open File";
             // 
-            // fileContentsBindingSource
+            // helpAboutButton
             // 
-            this.fileContentsBindingSource.DataSource = typeof(MyFormsApp_ILMerge.Documents.Interfaces.IDocument);
+            this.helpAboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.helpAboutButton.Enabled = false;
+            this.helpAboutButton.Image = ((System.Drawing.Image)(resources.GetObject("helpAboutButton.Image")));
+            this.helpAboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.helpAboutButton.Name = "helpAboutButton";
+            this.helpAboutButton.Size = new System.Drawing.Size(24, 24);
+            this.helpAboutButton.Text = "He&lp";
+            // 
+            // sep2
+            // 
+            this.sep2.Name = "sep2";
+            this.sep2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // editPasteButton
+            // 
+            this.editPasteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editPasteButton.Enabled = false;
+            this.editPasteButton.Image = ((System.Drawing.Image)(resources.GetObject("editPasteButton.Image")));
+            this.editPasteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editPasteButton.Name = "editPasteButton";
+            this.editPasteButton.Size = new System.Drawing.Size(24, 24);
+            this.editPasteButton.Text = "&Paste";
+            // 
+            // editCopyButton
+            // 
+            this.editCopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editCopyButton.Enabled = false;
+            this.editCopyButton.Image = ((System.Drawing.Image)(resources.GetObject("editCopyButton.Image")));
+            this.editCopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editCopyButton.Name = "editCopyButton";
+            this.editCopyButton.Size = new System.Drawing.Size(24, 24);
+            this.editCopyButton.Text = "&Copy";
+            // 
+            // editCutButton
+            // 
+            this.editCutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editCutButton.Enabled = false;
+            this.editCutButton.Image = ((System.Drawing.Image)(resources.GetObject("editCutButton.Image")));
+            this.editCutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editCutButton.Name = "editCutButton";
+            this.editCutButton.Size = new System.Drawing.Size(24, 24);
+            this.editCutButton.Text = "C&ut";
+            // 
+            // sep1
+            // 
+            this.sep1.Name = "sep1";
+            this.sep1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // filePrintButton
+            // 
+            this.filePrintButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.filePrintButton.Enabled = false;
+            this.filePrintButton.Image = ((System.Drawing.Image)(resources.GetObject("filePrintButton.Image")));
+            this.filePrintButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.filePrintButton.Name = "filePrintButton";
+            this.filePrintButton.Size = new System.Drawing.Size(24, 24);
+            this.filePrintButton.Text = "&Print";
+            // 
+            // fileSaveButton
+            // 
+            this.fileSaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.fileSaveButton.Enabled = false;
+            this.fileSaveButton.Image = ((System.Drawing.Image)(resources.GetObject("fileSaveButton.Image")));
+            this.fileSaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fileSaveButton.Name = "fileSaveButton";
+            this.fileSaveButton.Size = new System.Drawing.Size(24, 24);
+            this.fileSaveButton.Text = "&Save";
+            // 
+            // fileOpenButton
+            // 
+            this.fileOpenButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.fileOpenButton.Image = ((System.Drawing.Image)(resources.GetObject("fileOpenButton.Image")));
+            this.fileOpenButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fileOpenButton.Name = "fileOpenButton";
+            this.fileOpenButton.Size = new System.Drawing.Size(24, 24);
+            this.fileOpenButton.Text = "&Open";
+            this.fileOpenButton.Click += new System.EventHandler(this.OnFileOpen);
+            // 
+            // fileNewButton
+            // 
+            this.fileNewButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.fileNewButton.Enabled = false;
+            this.fileNewButton.Image = ((System.Drawing.Image)(resources.GetObject("fileNewButton.Image")));
+            this.fileNewButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fileNewButton.Name = "fileNewButton";
+            this.fileNewButton.Size = new System.Drawing.Size(24, 24);
+            this.fileNewButton.Text = "&New";
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(928, 546);
+            this.ClientSize = new System.Drawing.Size(742, 437);
             this.Controls.Add(this.fileContentTextBox);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.standardToolStrip);
@@ -535,6 +539,7 @@ namespace MyFormsApp_ILMerge
             this.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenu;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ILMerge Demo Application";
@@ -586,6 +591,11 @@ namespace MyFormsApp_ILMerge
         private System.Windows.Forms.ToolStripMenuItem viewToolbar;
         private System.Windows.Forms.ToolStripMenuItem viewStatusBar;
         private System.Windows.Forms.ToolStrip standardToolStrip;
+        private System.Windows.Forms.StatusStrip statusBar;
+        private System.Windows.Forms.ToolStripStatusLabel messageLabel;
+        private System.Windows.Forms.TextBox fileContentTextBox;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.BindingSource fileContentsBindingSource;
         private System.Windows.Forms.ToolStripButton fileNewButton;
         private System.Windows.Forms.ToolStripButton fileOpenButton;
         private System.Windows.Forms.ToolStripButton fileSaveButton;
@@ -596,11 +606,6 @@ namespace MyFormsApp_ILMerge
         private System.Windows.Forms.ToolStripButton editPasteButton;
         private System.Windows.Forms.ToolStripSeparator sep2;
         private System.Windows.Forms.ToolStripButton helpAboutButton;
-        private System.Windows.Forms.StatusStrip statusBar;
-        private System.Windows.Forms.ToolStripStatusLabel messageLabel;
-        private System.Windows.Forms.TextBox fileContentTextBox;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.BindingSource fileContentsBindingSource;
     }
 }
 

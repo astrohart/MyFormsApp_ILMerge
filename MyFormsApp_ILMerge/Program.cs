@@ -2,6 +2,7 @@
 using Core.Logging.Constants;
 using MyFormsApp_ILMerge.Logging.Actions;
 using System;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -18,6 +19,8 @@ namespace MyFormsApp_ILMerge
         [STAThread]
         public static void Main()
         {
+            SetProcessDPIAware();
+
             LogFileManager.InitializeLogging(
                 false, true,
                 infrastructureType: LoggingInfrastructureType.PostSharp,
@@ -34,6 +37,19 @@ namespace MyFormsApp_ILMerge
 
             Application.Run(new MainWindow());
         }
+
+        /// <summary>
+        /// Sets the process-default DPI awareness to system-DPI awareness. This is
+        /// equivalent to calling <c>SetProcessDpiAwarenessContext</c> with a
+        /// <c>DPI_AWARENESS_CONTEXT</c> value of <c>DPI_AWARENESS_CONTEXT_SYSTEM_AWARE</c>
+        /// .
+        /// </summary>
+        /// <returns>
+        /// If the function succeeds, the return value is nonzero. Otherwise, the
+        /// return value is zero.
+        /// </returns>
+        [DllImport("user32.dll")]
+        public static extern bool SetProcessDPIAware();
 
         private static void OnThreadException(object sender,
             ThreadExceptionEventArgs e)
