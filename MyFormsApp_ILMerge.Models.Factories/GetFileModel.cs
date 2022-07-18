@@ -1,4 +1,4 @@
-﻿using Core.Logging;
+using Core.Logging;
 using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Interfaces;
 using System;
