@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\PostSharp.6.10.15\build\PostSharp.props" Condition="Exists('..\packages\PostSharp.6.10.15\build\PostSharp.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{328E5CA6-7630-46A1-886C-7EE83B6D6186}</ProjectGuid>
+    <ProjectGuid>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyFormsApp_ILMerge.Models.Constants</RootNamespace>
-    <AssemblyName>MyFormsApp_ILMerge.Models.Constants</AssemblyName>
+    <RootNamespace>MyFormsApp_ILMerge.Documents.Interfaces</RootNamespace>
+    <AssemblyName>MyFormsApp_ILMerge.Documents.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>false</Deterministic>
+    <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MyFormsApp_ILMerge.Models.Constants.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\MyFormsApp_ILMerge.Documents.Interfaces.xml</DocumentationFile>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -34,7 +34,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MyFormsApp_ILMerge.Models.Constants.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\MyFormsApp_ILMerge.Documents.Interfaces.xml</DocumentationFile>
     <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
@@ -63,8 +63,9 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileType.cs" />
     <Compile Include="GlobalAspects.cs" />
+    <Compile Include="IDocTemplate.cs" />
+    <Compile Include="IDocument.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -82,6 +83,16 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Constants\MyFormsApp_ILMerge.Documents.Constants.csproj">
+      <Project>{A265AC0F-78F3-437F-9578-6F85195E570D}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Events\MyFormsApp_ILMerge.Documents.Events.csproj">
+      <Project>{5BE333DD-A083-4626-A8CE-E1502B93FB09}</Project>
+      <Name>MyFormsApp_ILMerge.Documents.Events</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
