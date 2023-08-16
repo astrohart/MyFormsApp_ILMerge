@@ -1,4 +1,4 @@
-using Alphaleonis.Win32.Filesystem;
+﻿using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
