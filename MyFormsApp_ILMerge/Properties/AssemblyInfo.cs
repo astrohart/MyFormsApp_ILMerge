@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("xyLOGIX, LLC")]
 [assembly: AssemblyProduct("ILMerge Demo Application")]
-[assembly: AssemblyCopyright("Copyright ? xyLOGIX, LLC 2022")]
+[assembly: AssemblyCopyright("Copyright © xyLOGIX, LLC 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
