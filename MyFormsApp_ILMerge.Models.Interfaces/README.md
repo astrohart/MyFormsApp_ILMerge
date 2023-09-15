@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Models.Interfaces
 
 ## Contents
@@ -23,8 +23,8 @@ MyFormsApp_ILMerge.Models.Interfaces
 
 ##### Summary
 
-Defines the publicly-exposed methods and properties of an object that models a
-file on the disk.
+Defines the publicly-exposed methods and properties of an object that
+models a file on the disk.
 
 ##### Generic Types
 
@@ -43,8 +43,8 @@ the loading of data from files on the disk, not the saving of the data.
 
 ##### Summary
 
-Gets or sets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified
-pathname of the file.
+Gets or sets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the
+fully-qualified pathname of the file.
 
 ##### Remarks
 
@@ -75,8 +75,8 @@ data.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be loaded. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be loaded. |
 
 <a name='T-MyFormsApp_ILMerge-Models-Interfaces-ITextFileModel'></a>
 ## ITextFileModel `type`
@@ -87,7 +87,8 @@ MyFormsApp_ILMerge.Models.Interfaces
 
 ##### Summary
 
-Defines the publicly-exposed methods and properties of the model of a text file.
+Defines the publicly-exposed methods and properties of the model of a
+text file.
 
 <a name='P-MyFormsApp_ILMerge-Models-Interfaces-ITextFileModel-FileType'></a>
 ### FileType `property`
@@ -106,16 +107,16 @@ Loads the data from the file on the disk with the specified pathname.
 
 ##### Returns
 
-A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the file's data, or blank if
-either an issue occurred during the loading process, or if the file does not
-exist at the specified `pathname`.
+A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the file's data, or
+blank if either an issue occurred during the loading process, or if the file
+does not exist at the specified `pathname`.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be loaded. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be loaded. |
 
 <a name='T-MyFormsApp_ILMerge-Models-Interfaces-Properties-Resources'></a>
 ## Resources `type`
@@ -133,8 +134,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Models-Interfaces-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

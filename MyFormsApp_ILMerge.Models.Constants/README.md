@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Models.Constants
 
 ## Contents
@@ -51,8 +51,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Models-Constants-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

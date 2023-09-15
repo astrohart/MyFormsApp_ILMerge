@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Documents.Interfaces
 
 ## Contents
@@ -30,13 +30,13 @@ MyFormsApp_ILMerge.Documents.Interfaces
 
 ##### Summary
 
-Defines the publicly-exposed methods and properties of a document template
-object.
+Defines the publicly-exposed methods and properties of a document
+template object.
 
 ##### Remarks
 
-Shoutout to Chris Sells, and his book, "Windows Forms 2.0 Programming," for
-inspiring the design of this interface.
+Shoutout to Chris Sells, and his book, "Windows Forms 2.0
+Programming," for inspiring the design of this interface.
 
 <a name='M-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate-OpenDocumentFile-System-String-'></a>
 ### OpenDocumentFile(path) `method`
@@ -49,15 +49,16 @@ Opens the document having the specified `path`.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file you wish to open. |
+| path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the
+fully-qualified pathname of the file you wish to open. |
 
 <a name='M-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate-SetCaption'></a>
 ### SetCaption() `method`
 
 ##### Summary
 
-Sets the caption(s) of all views that are displaying documents of this type.
+Sets the caption(s) of all views that are displaying documents of
+this type.
 
 ##### Parameters
 
@@ -72,12 +73,13 @@ MyFormsApp_ILMerge.Documents.Interfaces
 
 ##### Summary
 
-Defines the publicly-exposed methods and properties of a document object.
+Defines the publicly-exposed methods and properties of a document
+object.
 
 ##### Remarks
 
-A document object serves to manage the exchange of data between a file
-on the disk and a view that displays the data.
+A document object serves to manage the exchange of data between a
+file on the disk and a view that displays the data.
 
 
 
@@ -98,18 +100,18 @@ enumeration values that explain what state the document object is in.
 
 ##### Summary
 
-Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether this
-document has been modified.
+Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether
+this document has been modified.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-DocTemplate'></a>
 ### DocTemplate `property`
 
 ##### Summary
 
-Gets or sets a reference to an instance of an object that implements the
-[IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate') interface
-and which plays the role of the document template that "owns" this document
-object.
+Gets or sets a reference to an instance of an object that implements
+the [IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate')
+interface and which plays the role of the document template that "owns" this
+document object.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-FileContents'></a>
 ### FileContents `property`
@@ -123,8 +125,8 @@ Gets or sets the contents of the file that is currently open.
 
 ##### Summary
 
-Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified
-pathname of the file that is currently open.
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the
+fully-qualified pathname of the file that is currently open.
 
 ##### Remarks
 
@@ -152,8 +154,8 @@ This method has no parameters.
 
 ##### Summary
 
-Determines whether the document object will open the file with the specified
-`pathname`.
+Determines whether the document object will open the file with the
+specified `pathname`.
 
 
 
@@ -162,16 +164,16 @@ It does this by matching the extension of the file whose
 
 ##### Returns
 
-`true` if the type of file specified by the extension
-of `pathname` is supported; `false`
-otherwise.
+`true` if the type of file specified by the
+extension of `pathname` is supported;
+`false` otherwise.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be checked. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be checked. |
 
 <a name='M-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-OpenDocument-System-String-'></a>
 ### OpenDocument(pathname) `method`
@@ -188,8 +190,8 @@ Opens a document with the specified `pathname`.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be opened. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be opened. |
 
 <a name='M-MyFormsApp_ILMerge-Documents-Interfaces-IDocument-SetDirty-System-Boolean-'></a>
 ### SetDirty(dirty) `method`
@@ -245,8 +247,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Interfaces-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

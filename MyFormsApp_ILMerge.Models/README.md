@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Models
 
 ## Contents
@@ -26,16 +26,16 @@ MyFormsApp_ILMerge.Models
 
 ##### Summary
 
-Defines the events, methods, properties, and behaviors for all models of files
-of any type.
+Defines the events, methods, properties, and behaviors for all models
+of files of any type.
 
 <a name='P-MyFormsApp_ILMerge-Models-FileModelBase`1-FileName'></a>
 ### FileName `property`
 
 ##### Summary
 
-Gets or sets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified
-pathname of the file.
+Gets or sets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the
+fully-qualified pathname of the file.
 
 ##### Remarks
 
@@ -66,8 +66,8 @@ data.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be loaded. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be loaded. |
 
 <a name='T-MyFormsApp_ILMerge-Models-Properties-Resources'></a>
 ## Resources `type`
@@ -85,8 +85,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Models-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
@@ -111,7 +110,8 @@ Models the data from a text file.
 
 ##### Summary
 
-Empty, protected constructor to prohibit direct allocation of this class.
+Empty, protected constructor to prohibit direct allocation of this
+class.
 
 ##### Parameters
 
@@ -130,7 +130,8 @@ enumeration value that describes which type of file this object models.
 
 ##### Summary
 
-Gets a reference to the one and only instance of the object that implements the
+Gets a reference to the one and only instance of the object that
+implements the
 [ITextFileModel](#T-MyFormsApp_ILMerge-Models-Interfaces-ITextFileModel 'MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel') interface.
 
 <a name='M-MyFormsApp_ILMerge-Models-TextFileModel-#cctor'></a>
@@ -138,7 +139,8 @@ Gets a reference to the one and only instance of the object that implements the
 
 ##### Summary
 
-Empty, static constructor to prohibit direct allocation of this class.
+Empty, static constructor to prohibit direct allocation of this
+class.
 
 ##### Parameters
 
@@ -153,13 +155,13 @@ Loads the data from the file on the disk with the specified pathname.
 
 ##### Returns
 
-A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the file's data, or blank if
-either an issue occurred during the loading process, or if the file does not
-exist at the specified `pathname`.
+A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the file's data, or
+blank if either an issue occurred during the loading process, or if the file
+does not exist at the specified `pathname`.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be loaded. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be loaded. |

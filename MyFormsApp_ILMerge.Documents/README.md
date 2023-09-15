@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Documents
 
 ## Contents
@@ -57,7 +57,8 @@ This constructor has no parameters.
 
 ##### Remarks
 
-This empty, protected constructor to prohibit direct allocation of this class.
+This empty, protected constructor to prohibit direct allocation of
+this class.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-CurrentState'></a>
 ### CurrentState `property`
@@ -73,18 +74,18 @@ enumeration values that explain what state the document object is in.
 
 ##### Summary
 
-Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether this
-document has been modified.
+Gets a [Boolean](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Boolean 'System.Boolean') value that indicates whether
+this document has been modified.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-DocTemplate'></a>
 ### DocTemplate `property`
 
 ##### Summary
 
-Gets or sets a reference to an instance of an object that implements the
-[IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate') interface
-and which plays the role of the document template that "owns" this document
-object.
+Gets or sets a reference to an instance of an object that implements
+the [IDocTemplate](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocTemplate 'MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate')
+interface and which plays the role of the document template that "owns" this
+document object.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-FileContents'></a>
 ### FileContents `property`
@@ -98,8 +99,8 @@ Gets or sets the contents of the file that is currently open.
 
 ##### Summary
 
-Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified
-pathname of the file that is currently open.
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the
+fully-qualified pathname of the file that is currently open.
 
 ##### Remarks
 
@@ -140,7 +141,8 @@ This method has no parameters.
 
 ##### Remarks
 
-Empty, static constructor to prohibit direct allocation of this class.
+Empty, static constructor to prohibit direct allocation of this
+class.
 
 <a name='M-MyFormsApp_ILMerge-Documents-Document-CloseDocument'></a>
 ### CloseDocument() `method`
@@ -163,8 +165,8 @@ This method has no parameters.
 
 ##### Summary
 
-Determines whether the document object will open the file with the specified
-`pathname`.
+Determines whether the document object will open the file with the
+specified `pathname`.
 
 
 
@@ -173,16 +175,16 @@ It does this by matching the extension of the file whose
 
 ##### Returns
 
-`true` if the type of file specified by the extension
-of `pathname` is supported; `false`
-otherwise.
+`true` if the type of file specified by the
+extension of `pathname` is supported;
+`false` otherwise.
 
 ##### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be checked. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be checked. |
 
 <a name='M-MyFormsApp_ILMerge-Documents-Document-OnDocumentStateChanged-MyFormsApp_ILMerge-Documents-Events-DocumentStateChangedEventArgs-'></a>
 ### OnDocumentStateChanged(e) `method`
@@ -229,8 +231,8 @@ Opens a document with the specified `pathname`.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file to be opened. |
+| pathname | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing
+the fully-qualified pathname of the file to be opened. |
 
 <a name='M-MyFormsApp_ILMerge-Documents-Document-SetDirty-System-Boolean-'></a>
 ### SetDirty(dirty) `method`
@@ -289,8 +291,8 @@ blank string (the default) in order to mark this as a new document.
 
 ##### Summary
 
-Raises the [](#E-MyFormsApp_ILMerge-Documents-Document-DataUpdated 'MyFormsApp_ILMerge.Documents.Document.DataUpdated')
-event.
+Raises the
+[](#E-MyFormsApp_ILMerge-Documents-Document-DataUpdated 'MyFormsApp_ILMerge.Documents.Document.DataUpdated') event.
 
 ##### Parameters
 
@@ -312,8 +314,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

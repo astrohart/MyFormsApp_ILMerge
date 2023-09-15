@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge
 
 ## Contents
@@ -34,8 +34,8 @@ The main window of the application.
 
 ##### Summary
 
-Constructs a new instance of [MainWindow](#T-MyFormsApp_ILMerge-MainWindow 'MyFormsApp_ILMerge.MainWindow') and
-returns a reference to it.
+Constructs a new instance of
+[MainWindow](#T-MyFormsApp_ILMerge-MainWindow 'MyFormsApp_ILMerge.MainWindow') and returns a reference to it.
 
 ##### Parameters
 
@@ -53,8 +53,9 @@ Required designer variable.
 
 ##### Summary
 
-Gets a reference to the sole instance of an object that implements the
-[IDocument](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocument 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument') interface.
+Gets a reference to the sole instance of an object that implements
+the [IDocument](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocument 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument')
+interface.
 
 <a name='M-MyFormsApp_ILMerge-MainWindow-Dispose-System-Boolean-'></a>
 ### Dispose(disposing) `method`
@@ -74,8 +75,7 @@ Clean up any resources being used.
 
 ##### Summary
 
-Required method for Designer support - do not modify
-the contents of this method with the code editor.
+Required method for Designer support - do not modify the contents of this method with the code editor.
 
 ##### Parameters
 
@@ -106,15 +106,16 @@ Opens the document having the specified `path`.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the fully-qualified
-pathname of the file you wish to open. |
+| path | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | (Required.) A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the
+fully-qualified pathname of the file you wish to open. |
 
 <a name='M-MyFormsApp_ILMerge-MainWindow-SetCaption'></a>
 ### SetCaption() `method`
 
 ##### Summary
 
-Sets the caption(s) of all views that are displaying documents of this type.
+Sets the caption(s) of all views that are displaying documents of
+this type.
 
 ##### Parameters
 
@@ -158,8 +159,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

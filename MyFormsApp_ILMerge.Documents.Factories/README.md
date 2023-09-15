@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Documents.Factories
 
 ## Contents
@@ -18,8 +18,9 @@ MyFormsApp_ILMerge.Documents.Factories
 
 ##### Summary
 
-Provides access to the one and only instance of the object that implements the
-[IDocument](#T-MyFormsApp_ILMerge-Documents-IDocument 'MyFormsApp_ILMerge.Documents.IDocument') interface.
+Provides access to the one and only instance of the object that
+implements the [IDocument](#T-MyFormsApp_ILMerge-Documents-IDocument 'MyFormsApp_ILMerge.Documents.IDocument')
+interface.
 
 <a name='M-MyFormsApp_ILMerge-Documents-Factories-GetDocument-SoleInstance'></a>
 ### SoleInstance() `method`
@@ -32,7 +33,8 @@ and returns a reference to it.
 
 ##### Returns
 
-Reference to the one, and only, instance of the object that implements the
+Reference to the one, and only, instance of the object that
+implements the
 [IDocument](#T-MyFormsApp_ILMerge-Documents-Interfaces-IDocument 'MyFormsApp_ILMerge.Documents.Interfaces.IDocument') interface.
 
 ##### Parameters
@@ -55,8 +57,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Factories-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

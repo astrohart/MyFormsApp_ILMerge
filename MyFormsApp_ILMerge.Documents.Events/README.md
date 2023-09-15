@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Documents.Events
 
 ## Contents
@@ -50,7 +50,8 @@ is. |
 
 ##### Summary
 
-Gets the [DocumentState](#T-MyFormsApp_ILMerge-Documents-Constants-DocumentState 'MyFormsApp_ILMerge.Documents.Constants.DocumentState')
+Gets the
+[DocumentState](#T-MyFormsApp_ILMerge-Documents-Constants-DocumentState 'MyFormsApp_ILMerge.Documents.Constants.DocumentState')
 enumeration value that corresponds to what the new state of the document object
 is.
 
@@ -59,7 +60,8 @@ is.
 
 ##### Summary
 
-Gets the [DocumentState](#T-MyFormsApp_ILMerge-Documents-Constants-DocumentState 'MyFormsApp_ILMerge.Documents.Constants.DocumentState')
+Gets the
+[DocumentState](#T-MyFormsApp_ILMerge-Documents-Constants-DocumentState 'MyFormsApp_ILMerge.Documents.Constants.DocumentState')
 enumeration value that corresponds to what state the document object used to be
 in.
 
@@ -78,12 +80,13 @@ Represents a handler for a `DocumentStateChanged` event.
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| sender | [T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventHandler](#T-T-MyFormsApp_ILMerge-Documents-Events-DocumentStateChangedEventHandler 'T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventHandler') | Reference to the instance of the object that raised the event. |
+| sender | [T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventHandler](#T-T-MyFormsApp_ILMerge-Documents-Events-DocumentStateChangedEventHandler 'T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventHandler') | Reference to the instance of the object that raised the
+event. |
 
 ##### Remarks
 
-This delegate merely specifies the signature of all methods that handle the
-`DocumentStateChanged` event.
+This delegate merely specifies the signature of all methods that
+handle the `DocumentStateChanged` event.
 
 <a name='T-MyFormsApp_ILMerge-Documents-Events-Properties-Resources'></a>
 ## Resources `type`
@@ -101,8 +104,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Events-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

@@ -1,4 +1,4 @@
-﻿<a name='assembly'></a>
+<a name='assembly'></a>
 # MyFormsApp_ILMerge.Models.Factories
 
 ## Contents
@@ -28,16 +28,15 @@ that change depending on the strategy desired.
 ##### Summary
 
 Obtains a reference to an instance of an object that implements the
-[IFileModel{T}](#T-MyFormsApp_ILMerge-Models-Interfaces-IFileModel{T} 'MyFormsApp_ILMerge.Models.Interfaces.IFileModel{T}')
-interface which corresponds to the specified meeting
-`fileType`.
+[IFileModel{T}](#T-MyFormsApp_ILMerge-Models-Interfaces-IFileModel{T} 'MyFormsApp_ILMerge.Models.Interfaces.IFileModel{T}') interface
+which corresponds to the specified meeting `fileType`.
 
 ##### Returns
 
 Reference to the instance of the object that implements the
-[IFileModel{T}](#T-MyFormsApp_ILMerge-Models-Interfaces-IFileModel{T} 'MyFormsApp_ILMerge.Models.Interfaces.IFileModel{T}')
-interface which corresponds to the specific enumeration value that is
-specified for the argument of the `fileType` parameter.
+[IFileModel{T}](#T-MyFormsApp_ILMerge-Models-Interfaces-IFileModel{T} 'MyFormsApp_ILMerge.Models.Interfaces.IFileModel{T}') interface
+which corresponds to the specific enumeration value that is specified for the
+argument of the `fileType` parameter.
 
 ##### Parameters
 
@@ -81,8 +80,7 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
 
 <a name='P-MyFormsApp_ILMerge-Models-Factories-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
