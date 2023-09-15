@@ -2,6 +2,7 @@
 using Core.Logging;
 using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Interfaces;
+using PostSharp.Patterns.Diagnostics;
 using System;
 using System.Windows.Forms;
 
@@ -46,6 +47,7 @@ namespace MyFormsApp_ILMerge.Models
         /// blank if either an issue occurred during the loading process, or if the file
         /// does not exist at the specified <paramref name="pathname" />.
         /// </returns>
+        [return: NotLogged]
         public override string LoadFrom(string pathname)
         {
             var result = string.Empty;
