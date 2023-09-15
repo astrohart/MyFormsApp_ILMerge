@@ -83,6 +83,16 @@
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core.Assemblies.Info\Core.Assemblies.Info\Core.Assemblies.Info.csproj">
+      <Project>{69827DE2-40A0-4471-BBA8-E2211C7D5ED7}</Project>
+      <Name>Core.Assemblies.Info</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core.Logging\Core.Logging\Core.Logging.csproj">
+      <Project>{0D198925-B01C-4DDE-A062-ED7D7BFD0FAA}</Project>
+      <Name>Core.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>SET "_PROJECT_DIR=$(ProjectDir.TrimEnd('\'))"

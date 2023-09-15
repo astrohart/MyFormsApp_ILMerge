@@ -60,7 +60,7 @@ namespace MyFormsApp_ILMerge.Documents
 
                 if (oldState != value)
                     OnDocumentStateChanged(
-                        new DocumentStateChangedEventArgs(oldState, value)
+                        new DocumentStateChangedEventArgs(value, oldState)
                     );
             }
         }
