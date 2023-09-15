@@ -15,6 +15,13 @@ namespace MyFormsApp_ILMerge
         [STAThread]
         public static void Main()
         {
+            LogFileManager.InitializeLogging(
+                muteConsole: false,
+                infrastructureType: LoggingInfrastructureType.PostSharp,
+                logFileName: Get.LogFilePath(),
+                applicationName: Get.ApplicationProductName()
+            );
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
