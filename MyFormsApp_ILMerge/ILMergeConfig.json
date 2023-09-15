@@ -11,7 +11,6 @@
         "MyFormsApp_ILMerge.Documents.Events.dll",
         "MyFormsApp_ILMerge.Documents.Factories.dll",
         "MyFormsApp_ILMerge.Documents.Interfaces.dll",
-        "MyFormsApp_ILMerge.Logging.Actions.dll",
         "MyFormsApp_ILMerge.Models.dll",
         "MyFormsApp_ILMerge.Models.Constants.dll",
         "MyFormsApp_ILMerge.Models.Factories.dll",
