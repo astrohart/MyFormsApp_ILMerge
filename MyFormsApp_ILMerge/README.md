@@ -16,6 +16,7 @@
   - [Main()](#M-MyFormsApp_ILMerge-Program-Main 'MyFormsApp_ILMerge.Program.Main')
 - [Resources](#T-MyFormsApp_ILMerge-Properties-Resources 'MyFormsApp_ILMerge.Properties.Resources')
   - [Culture](#P-MyFormsApp_ILMerge-Properties-Resources-Culture 'MyFormsApp_ILMerge.Properties.Resources.Culture')
+  - [Error_CannotSetupLogging](#P-MyFormsApp_ILMerge-Properties-Resources-Error_CannotSetupLogging 'MyFormsApp_ILMerge.Properties.Resources.Error_CannotSetupLogging')
   - [ResourceManager](#P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager 'MyFormsApp_ILMerge.Properties.Resources.ResourceManager')
 
 <a name='T-MyFormsApp_ILMerge-MainWindow'></a>
@@ -159,7 +160,17 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+
+<a name='P-MyFormsApp_ILMerge-Properties-Resources-Error_CannotSetupLogging'></a>
+### Error_CannotSetupLogging `property`
+
+##### Summary
+
+Looks up a localized string similar to %APPNAME% failed to configure the infrastructure for producing a log file.
+
+The application will now close..
 
 <a name='P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
