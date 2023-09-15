@@ -122,4 +122,8 @@
 
 The application will now close.</value>
   </data>
+  <data name="Error_FileTypeNotSupported" xml:space="preserve">
+      <value>{0}
+This file is not of a type supported by this application.</value>
+  </data>
 </root>

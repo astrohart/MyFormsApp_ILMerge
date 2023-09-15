@@ -1,8 +1,11 @@
 ﻿using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
+using Core.Logging.Constants;
+using Core.Win32.Interact;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Factories;
 using MyFormsApp_ILMerge.Documents.Interfaces;
+using MyFormsApp_ILMerge.Properties;
 using System;
 using System.Windows.Forms;
 
@@ -23,8 +26,7 @@ namespace MyFormsApp_ILMerge
         /// the <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocument" />
         /// interface.
         /// </summary>
-        private static IDocument Document
-            => GetDocument.SoleInstance();
+        private static IDocument Document { get; } = GetDocument.SoleInstance();
 
         /// <summary> Opens the document having the specified <paramref name="path" />. </summary>
         /// <param name="path">
@@ -39,11 +41,11 @@ namespace MyFormsApp_ILMerge
                 if (!File.Exists(path)) return;
                 if (!Document.IsFileTypeSupported(path))
                 {
-                    MessageBox.Show(
+                    Messages.ShowStopError(
                         this,
-                        $"{path}\nThis file is not of a type supported by this application.",
-                        Application.ProductName, MessageBoxButtons.OK,
-                        MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1
+                        string.Format(
+                            Resources.Error_FileTypeNotSupported, path
+                        )
                     );
                     return;
                 }
@@ -52,14 +54,10 @@ namespace MyFormsApp_ILMerge
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    this, ex.Message, Application.ProductName,
-                    MessageBoxButtons.OK, MessageBoxIcon.Stop,
-                    MessageBoxDefaultButton.Button1
-                );
-
                 // dump all the exception info to the log
                 DebugUtils.LogException(ex);
+
+                Messages.ShowStopError(this, ex.Message);
             }
         }
 
@@ -83,23 +81,47 @@ namespace MyFormsApp_ILMerge
         /// </param>
         protected override void OnLoad(EventArgs e)
         {
-            base.OnLoad(e);
+            try
+            {
+                base.OnLoad(e);
 
-            Document.DataUpdated += OnDocumentDataUpdated;
-            Document.DocTemplate = this;
+                Document.DataUpdated += OnDocumentDataUpdated;
+                Document.DocTemplate = this;
 
-            ResetFileContentTextBox();
+                ResetFileContentTextBox();
 
-            fileContentsBindingSource.DataSource = Document;
+                fileContentsBindingSource.DataSource = Document;
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+
+                Messages.ShowStopError(this, ex.Message);
+            }
         }
 
         private void OnDocumentDataUpdated(object sender, EventArgs e)
         {
-            SetCaption();
-            ResetFileContentTextBox();
+            try
+            {
+                SetCaption();
+                ResetFileContentTextBox();
 
-            //fileContentsBindingSource.DataSource = Document;
-            fileContentsBindingSource.ResetBindings(false);
+                DebugUtils.WriteLine(
+                    DebugLevel.Info,
+                    "*** INFO: Causing the file content text box to re-read from its data source..."
+                );
+
+                fileContentsBindingSource.ResetBindings(false);
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+
+                Messages.ShowStopError(this, ex.Message);
+            }
         }
 
         private void OnFileExit(object sender, EventArgs e)
@@ -120,8 +142,18 @@ namespace MyFormsApp_ILMerge
 
         private void ResetFileContentTextBox()
         {
-            fileContentTextBox.Clear();
-            fileContentTextBox.ClearUndo();
+            try
+            {
+                fileContentTextBox.Clear();
+                fileContentTextBox.ClearUndo();
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+
+                Messages.ShowStopError(this, ex.Message);
+            }
         }
     }
 }

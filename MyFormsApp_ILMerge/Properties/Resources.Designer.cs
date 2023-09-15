@@ -70,5 +70,15 @@ namespace MyFormsApp_ILMerge.Properties {
                 return ResourceManager.GetString("Error_CannotSetupLogging", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}
+        ///This file is not of a type supported by this application..
+        /// </summary>
+        internal static string Error_FileTypeNotSupported {
+            get {
+                return ResourceManager.GetString("Error_FileTypeNotSupported", resourceCulture);
+            }
+        }
     }
 }
