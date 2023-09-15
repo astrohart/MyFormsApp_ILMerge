@@ -170,10 +170,6 @@
       <Project>{18DAA8D8-27D5-4CA9-9A63-BD7917BEF06A}</Project>
       <Name>MyFormsApp_ILMerge.Documents.Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MyFormsApp_ILMerge.Logging.Actions\MyFormsApp_ILMerge.Logging.Actions.csproj">
-      <Project>{39DB4661-B1C3-4EDB-B564-B90C8571133B}</Project>
-      <Name>MyFormsApp_ILMerge.Logging.Actions</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
