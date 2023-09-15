@@ -478,6 +478,7 @@ namespace MyFormsApp_ILMerge
             // 
             // statusBar
             // 
+            this.statusBar.AutoSize = false;
             this.statusBar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.messageLabel});
@@ -486,12 +487,13 @@ namespace MyFormsApp_ILMerge
             this.statusBar.Padding = new System.Windows.Forms.Padding(1, 0, 11, 0);
             this.statusBar.Size = new System.Drawing.Size(742, 22);
             this.statusBar.TabIndex = 2;
-            this.statusBar.Text = "statusStrip1";
+            this.statusBar.Text = "Status Bar";
             // 
             // messageLabel
             // 
+            this.messageLabel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.messageLabel.Name = "messageLabel";
-            this.messageLabel.Size = new System.Drawing.Size(730, 17);
+            this.messageLabel.Size = new System.Drawing.Size(699, 17);
             this.messageLabel.Spring = true;
             this.messageLabel.Text = "Ready";
             this.messageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
