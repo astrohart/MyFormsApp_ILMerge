@@ -17,6 +17,7 @@
 - [Resources](#T-MyFormsApp_ILMerge-Properties-Resources 'MyFormsApp_ILMerge.Properties.Resources')
   - [Culture](#P-MyFormsApp_ILMerge-Properties-Resources-Culture 'MyFormsApp_ILMerge.Properties.Resources.Culture')
   - [Error_CannotSetupLogging](#P-MyFormsApp_ILMerge-Properties-Resources-Error_CannotSetupLogging 'MyFormsApp_ILMerge.Properties.Resources.Error_CannotSetupLogging')
+  - [Error_FileTypeNotSupported](#P-MyFormsApp_ILMerge-Properties-Resources-Error_FileTypeNotSupported 'MyFormsApp_ILMerge.Properties.Resources.Error_FileTypeNotSupported')
   - [ResourceManager](#P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager 'MyFormsApp_ILMerge.Properties.Resources.ResourceManager')
 
 <a name='T-MyFormsApp_ILMerge-MainWindow'></a>
@@ -171,6 +172,14 @@ Overrides the current thread's CurrentUICulture property for all
 Looks up a localized string similar to %APPNAME% failed to configure the infrastructure for producing a log file.
 
 The application will now close..
+
+<a name='P-MyFormsApp_ILMerge-Properties-Resources-Error_FileTypeNotSupported'></a>
+### Error_FileTypeNotSupported `property`
+
+##### Summary
+
+Looks up a localized string similar to {0}
+This file is not of a type supported by this application..
 
 <a name='P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`

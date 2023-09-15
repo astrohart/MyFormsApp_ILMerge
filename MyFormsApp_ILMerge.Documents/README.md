@@ -5,6 +5,7 @@
 
 - [Document](#T-MyFormsApp_ILMerge-Documents-Document 'MyFormsApp_ILMerge.Documents.Document')
   - [#ctor()](#M-MyFormsApp_ILMerge-Documents-Document-#ctor 'MyFormsApp_ILMerge.Documents.Document.#ctor')
+  - [_currentState](#F-MyFormsApp_ILMerge-Documents-Document-_currentState 'MyFormsApp_ILMerge.Documents.Document._currentState')
   - [CurrentState](#P-MyFormsApp_ILMerge-Documents-Document-CurrentState 'MyFormsApp_ILMerge.Documents.Document.CurrentState')
   - [Dirty](#P-MyFormsApp_ILMerge-Documents-Document-Dirty 'MyFormsApp_ILMerge.Documents.Document.Dirty')
   - [DocTemplate](#P-MyFormsApp_ILMerge-Documents-Document-DocTemplate 'MyFormsApp_ILMerge.Documents.Document.DocTemplate')
@@ -24,6 +25,7 @@
   - [UpdateAllViews()](#M-MyFormsApp_ILMerge-Documents-Document-UpdateAllViews 'MyFormsApp_ILMerge.Documents.Document.UpdateAllViews')
 - [Resources](#T-MyFormsApp_ILMerge-Documents-Properties-Resources 'MyFormsApp_ILMerge.Documents.Properties.Resources')
   - [Culture](#P-MyFormsApp_ILMerge-Documents-Properties-Resources-Culture 'MyFormsApp_ILMerge.Documents.Properties.Resources.Culture')
+  - [Prompt_CloseWithoutSave](#P-MyFormsApp_ILMerge-Documents-Properties-Resources-Prompt_CloseWithoutSave 'MyFormsApp_ILMerge.Documents.Properties.Resources.Prompt_CloseWithoutSave')
   - [ResourceManager](#P-MyFormsApp_ILMerge-Documents-Properties-Resources-ResourceManager 'MyFormsApp_ILMerge.Documents.Properties.Resources.ResourceManager')
 
 <a name='T-MyFormsApp_ILMerge-Documents-Document'></a>
@@ -59,6 +61,15 @@ This constructor has no parameters.
 
 This empty, protected constructor to prohibit direct allocation of
 this class.
+
+<a name='F-MyFormsApp_ILMerge-Documents-Document-_currentState'></a>
+### _currentState `constants`
+
+##### Summary
+
+One of the
+[DocumentState](#T-MyFormsApp_ILMerge-Documents-Constants-DocumentState 'MyFormsApp_ILMerge.Documents.Constants.DocumentState')
+enumeration values that indicates the current state of the document.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Document-CurrentState'></a>
 ### CurrentState `property`
@@ -159,6 +170,18 @@ document; `false` otherwise.
 ##### Parameters
 
 This method has no parameters.
+
+##### Remarks
+
+If we had Saving functionality enabled in this
+application, then this method would do more than simply return
+`true`, as it does in its current implementation.
+
+
+
+However, since we really mean for this application to demonstrate using
+`ILMerge`, we do not care about asking whether the user wants to save
+their modified changes before closing.
 
 <a name='M-MyFormsApp_ILMerge-Documents-Document-IsFileTypeSupported-System-String-'></a>
 ### IsFileTypeSupported(pathname) `method`
@@ -314,7 +337,17 @@ A strongly-typed resource class, for looking up localized strings, etc.
 
 ##### Summary
 
-Overrides the current thread's CurrentUICulture property for all resource lookups using this strongly typed resource class.
+Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+
+<a name='P-MyFormsApp_ILMerge-Documents-Properties-Resources-Prompt_CloseWithoutSave'></a>
+### Prompt_CloseWithoutSave `property`
+
+##### Summary
+
+Looks up a localized string similar to The file '{0}' has been modified.
+
+Do you want to close it without saving changes?.
 
 <a name='P-MyFormsApp_ILMerge-Documents-Properties-Resources-ResourceManager'></a>
 ### ResourceManager `property`
