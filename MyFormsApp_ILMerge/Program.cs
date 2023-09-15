@@ -57,6 +57,8 @@ namespace MyFormsApp_ILMerge
         {
             try
             {
+                Messages.ShowInformation($"Log file path is '{Get.LogFilePath()}'.");
+
                 LogFileManager.InitializeLogging(
                     muteConsole: false,
                     infrastructureType: LoggingInfrastructureType.PostSharp,
