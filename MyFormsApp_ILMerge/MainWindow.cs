@@ -8,18 +8,29 @@ using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge
 {
-///  <summary> The main window of the application. </summary>
+    /// <summary> The main window of the application. </summary>
     public partial class MainWindow : Form, IDocTemplate
     {
-///  <summary> Constructs a new instance of <see cref="T:MyFormsApp_ILMerge.MainWindow" /> and returns a reference to it. </summary>
+        /// <summary>
+        /// Constructs a new instance of
+        /// <see cref="T:MyFormsApp_ILMerge.MainWindow" /> and returns a reference to it.
+        /// </summary>
         public MainWindow()
             => InitializeComponent();
 
-///  <summary> Gets a reference to the sole instance of an object that implements the <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocument" /> interface. </summary>
+        /// <summary>
+        /// Gets a reference to the sole instance of an object that implements
+        /// the <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocument" />
+        /// interface.
+        /// </summary>
         private static IDocument Document
             => GetDocument.SoleInstance();
 
-///  <summary> Opens the document having the specified <paramref name="path" />. </summary> <param name="path"> (Required.) A <see cref="T:System.String" /> containing the fully-qualified pathname of the file you wish to open. </param>
+        /// <summary> Opens the document having the specified <paramref name="path" />. </summary>
+        /// <param name="path">
+        /// (Required.) A <see cref="T:System.String" /> containing the
+        /// fully-qualified pathname of the file you wish to open.
+        /// </param>
         public void OpenDocumentFile(string path)
         {
             try
@@ -52,7 +63,10 @@ namespace MyFormsApp_ILMerge
             }
         }
 
-///  <summary> Sets the caption(s) of all views that are displaying documents of this type. </summary>
+        /// <summary>
+        /// Sets the caption(s) of all views that are displaying documents of
+        /// this type.
+        /// </summary>
         public void SetCaption()
         {
             if (Document.CurrentState == DocumentState.Opening) return;
@@ -62,7 +76,11 @@ namespace MyFormsApp_ILMerge
                 : $"{Path.GetFileName(Document.FileName)}{(Document.Dirty ? "*" : "")} - {Application.ProductName}";
         }
 
-///  <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary> <param name="e"> An <see cref="T:System.EventArgs" /> that contains the event data. </param>
+        /// <summary>Raises the <see cref="E:System.Windows.Forms.Form.Load" /> event.</summary>
+        /// <param name="e">
+        /// An <see cref="T:System.EventArgs" /> that contains the event
+        /// data.
+        /// </param>
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);

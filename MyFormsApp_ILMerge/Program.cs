@@ -8,17 +8,15 @@ using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge
 {
-///  <summary> Defines the behaviors of the application. </summary>
+    /// <summary> Defines the behaviors of the application. </summary>
     public static class Program
     {
-///  <summary> The main entry point for the application. </summary>
+        /// <summary> The main entry point for the application. </summary>
         [STAThread]
         public static void Main()
         {
-
             LogFileManager.InitializeLogging(
-                false, true,
-                infrastructureType: LoggingInfrastructureType.PostSharp,
+                false, infrastructureType: LoggingInfrastructureType.PostSharp,
                 logFileName: Get.LogFilePath()
             );
 
@@ -35,8 +33,10 @@ namespace MyFormsApp_ILMerge
             Application.Run(new MainWindow());
         }
 
-        private static void OnThreadException(object sender,
-            ThreadExceptionEventArgs e)
+        private static void OnThreadException(
+            object sender,
+            ThreadExceptionEventArgs e
+        )
         {
             MessageBox.Show(
                 e.Exception.Message, Application.ProductName,
@@ -50,7 +50,8 @@ namespace MyFormsApp_ILMerge
 
         [DllImport("Shcore.dll")]
         private static extern int SetProcessDpiAwareness(
-            int PROCESS_DPI_AWARENESS);
+            int PROCESS_DPI_AWARENESS
+        );
 
         // According to https://msdn.microsoft.com/en-us/library/windows/desktop/dn280512(v=vs.85).aspx
         private enum DpiAwareness
