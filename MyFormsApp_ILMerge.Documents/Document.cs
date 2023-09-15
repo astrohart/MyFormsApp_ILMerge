@@ -1,4 +1,4 @@
-using Alphaleonis.Win32.Filesystem;
+﻿using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
@@ -11,44 +11,21 @@ using System.Windows.Forms;
 
 namespace MyFormsApp_ILMerge.Documents
 {
-    /// <summary>
-    /// Defines the behaviors of a document object.
-    /// </summary>
-    /// <remarks>
-    /// Document objects manage the interaction between the application and
-    /// the file system.
-    /// </remarks>
+///  <summary> Defines the behaviors of a document object. </summary> <remarks> Document objects manage the interaction between the application and the file system. </remarks>
     public class Document : IDocument
     {
         private DocumentState _currentState;
 
-        /// <summary>
-        /// Initializes static instances of the
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> class.
-        /// </summary>
-        /// <remarks>
-        /// Empty, static constructor to prohibit direct allocation of this class.
-        /// </remarks>
+///  <summary> Initializes static instances of the <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> class. </summary> <remarks> Empty, static constructor to prohibit direct allocation of this class. </remarks>
         static Document() { }
 
-        /// <summary>
-        /// Constructs a new instance of
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> and returns a reference
-        /// to it.
-        /// </summary>
-        /// <remarks>
-        /// This empty, protected constructor to prohibit direct allocation of this class.
-        /// </remarks>
+///  <summary> Constructs a new instance of <see cref="T:MyFormsApp_ILMerge.Documents.Document" /> and returns a reference to it. </summary> <remarks> This empty, protected constructor to prohibit direct allocation of this class. </remarks>
         protected Document()
             => SetDocumentState(
                 DocumentState.Idle
             ); // start this object out in the Idle state
 
-        /// <summary>
-        /// Gets one of the
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration values that explain what state the document object is in.
-        /// </summary>
+///  <summary> Gets one of the <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" /> enumeration values that explain what state the document object is in. </summary>
         public DocumentState CurrentState
         {
             get => _currentState;
@@ -65,108 +42,45 @@ namespace MyFormsApp_ILMerge.Documents
             }
         }
 
-        /// <summary>
-        /// Gets a <see cref="T:System.Boolean" />  value that indicates whether this
-        /// document has been modified.
-        /// </summary>
+///  <summary> Gets a <see cref="T:System.Boolean" />  value that indicates whether this document has been modified. </summary>
         public bool Dirty { get; private set; }
 
-        /// <summary>
-        /// Gets or sets a reference to an instance of an object that implements the
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface
-        /// and which plays the role of the document template that "owns" this document
-        /// object.
-        /// </summary>
+///  <summary> Gets or sets a reference to an instance of an object that implements the <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocTemplate" /> interface and which plays the role of the document template that "owns" this document object. </summary>
         public IDocTemplate DocTemplate { get; set; }
 
-        /// <summary>
-        /// Gets or sets the contents of the file that is currently open.
-        /// </summary>
+///  <summary> Gets or sets the contents of the file that is currently open. </summary>
         public string FileContents { get; private set; }
 
-        /// <summary>
-        /// Gets a <see cref="T:System.String" /> that contains the fully-qualified
-        /// pathname of the file that is currently open.
-        /// </summary>
-        /// <remarks>
-        /// If the value of this property is <see langword="null" /> or the empty
-        /// string, then no document is loaded, or the user is working on a new document.
-        /// </remarks>
+///  <summary> Gets a <see cref="T:System.String" /> that contains the fully-qualified pathname of the file that is currently open. </summary> <remarks> If the value of this property is <see langword="null" /> or the empty string, then no document is loaded, or the user is working on a new document. </remarks>
         public string FileName { get; private set; }
 
-        /// <summary>
-        /// Gets a reference to the one and only instance of
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" />.
-        /// </summary>
+///  <summary> Gets a reference to the one and only instance of <see cref="T:MyFormsApp_ILMerge.Documents.Document" />. </summary>
         public static Document Instance { get; } = new Document();
 
-        /// <summary>
-        /// Gets a reference to an instance of the object that implements the
-        /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface.
-        /// </summary>
-        /// <remarks>This object is responsible for loading and saving the file's data.</remarks>
+///  <summary> Gets a reference to an instance of the object that implements the <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface. </summary> <remarks>This object is responsible for loading and saving the file's data.</remarks>
         private static ITextFileModel TextFileModel
             => GetFileModel.For<string>(FileType.Text) as ITextFileModel;
 
-        /// <summary>
-        /// Occurs when the document's data has been updated.
-        /// </summary>
-        /// <remarks>
-        /// This event serves to let the views of this document know that they
-        /// need to update themselves to display the most recent data.
-        /// </remarks>
+///  <summary> Occurs when the document's data has been updated. </summary> <remarks> This event serves to let the views of this document know that they need to update themselves to display the most recent data. </remarks>
         public event EventHandler DataUpdated;
 
-        /// <summary>
-        /// Occurs when the state of the document changes.
-        /// </summary>
+///  <summary> Occurs when the state of the document changes. </summary>
         public event DocumentStateChangedEventHandler DocumentStateChanged;
 
-        /// <summary>
-        /// Occurs when the user attempts to open a file whose type this document object
-        /// does not support.
-        /// </summary>
+///  <summary> Occurs when the user attempts to open a file whose type this document object does not support. </summary>
         public event EventHandler FileTypeNotSupported;
 
-        /// <summary>
-        /// Specifies whether the document that is currently open may be closed.
-        /// </summary>
-        /// <returns>
-        /// <see langword="true" /> if the user can close the currently-open
-        /// document; <see langword="false" /> otherwise.
-        /// </returns>
+///  <summary> Specifies whether the document that is currently open may be closed. </summary> <returns> <see langword="true" /> if the user can close the currently-open document; <see langword="false" /> otherwise. </returns>
         public bool CloseDocument()
             => true;
 
-        /// <summary>
-        /// Determines whether the document object will open the file with the specified
-        /// <paramref name="pathname" />.
-        /// <para />
-        /// It does this by matching the extension of the file whose
-        /// <paramref name="pathname" /> is provided against a static value.
-        /// </summary>
-        /// <param name="pathname">
-        /// (Required.) A <see cref="T:System.String" /> containing the fully-qualified
-        /// pathname of the file to be checked.
-        /// </param>
-        /// <returns>
-        /// <see langword="true" /> if the type of file specified by the extension
-        /// of <paramref name="pathname" /> is supported; <see langword="false" />
-        /// otherwise.
-        /// </returns>
+///  <summary> Determines whether the document object will open the file with the specified <paramref name="pathname" />. <para /> It does this by matching the extension of the file whose <paramref name="pathname" /> is provided against a static value. </summary> <param name="pathname"> (Required.) A <see cref="T:System.String" /> containing the fully-qualified pathname of the file to be checked. </param> <returns> <see langword="true" /> if the type of file specified by the extension of <paramref name="pathname" /> is supported; <see langword="false" /> otherwise. </returns>
         public bool IsFileTypeSupported(string pathname)
             => !string.IsNullOrWhiteSpace(pathname) &&
                ".txt".Equals(Path.GetExtension(pathname));
 
         // since this app does not have save functionality
-        /// <summary>
-        /// Opens a document with the specified <paramref name="pathname" />.
-        /// </summary>
-        /// <param name="pathname">
-        /// (Required.) A <see cref="T:System.String" /> containing the fully-qualified
-        /// pathname of the file to be opened.
-        /// </param>
-        /// <returns></returns>
+///  <summary> Opens a document with the specified <paramref name="pathname" />. </summary> <param name="pathname"> (Required.) A <see cref="T:System.String" /> containing the fully-qualified pathname of the file to be opened. </param> <returns></returns>
         public bool OpenDocument(string pathname)
         {
             var result = false;
@@ -236,70 +150,30 @@ namespace MyFormsApp_ILMerge.Documents
             return result;
         }
 
-        /// <summary>
-        /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.Dirty" /> property.
-        /// </summary>
-        /// <param name="dirty">
-        /// (Optional.)  Default is <see langword="true" />.  Set to
-        /// <see langword="true" /> to mark the document as dirty; <see langword="false" />
-        /// otherwise.
-        /// </param>
+///  <summary> Sets the value of the <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.Dirty" /> property. </summary> <param name="dirty"> (Optional.)  Default is <see langword="true" />.  Set to <see langword="true" /> to mark the document as dirty; <see langword="false" /> otherwise. </param>
         public void SetDirty(bool dirty = true)
         {
             Dirty = dirty;
             DocTemplate.SetCaption();
         }
 
-        /// <summary>
-        /// Sets the value of the
-        /// <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.FileName" /> property.
-        /// </summary>
-        /// <param name="fileName">
-        /// (Optional.) String containing the fully-qualified
-        /// pathname of the document that is currently open.
-        /// </param>
-        /// <remarks>
-        /// Set the value of the <paramref name="fileName" /> parameter to the
-        /// blank string (the default) in order to mark this as a new document.
-        /// </remarks>
+///  <summary> Sets the value of the <see cref="P:MyFormsApp_ILMerge.Documents.IDocument.FileName" /> property. </summary> <param name="fileName"> (Optional.) String containing the fully-qualified pathname of the document that is currently open. </param> <remarks> Set the value of the <paramref name="fileName" /> parameter to the blank string (the default) in order to mark this as a new document. </remarks>
         public void SetFileName(string fileName = "")
         {
             FileName = fileName;
             DocTemplate.SetCaption();
         }
 
-        /// <summary>
-        /// Raises the
-        /// <see cref="E:MyFormsApp_ILMerge.Documents.Document.DocumentStateChanged" />
-        /// event.
-        /// </summary>
-        /// <param name="e">
-        /// A
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventArgs" />
-        /// that corresponds to what the old and new states of the document object are.
-        /// </param>
+///  <summary> Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DocumentStateChanged" /> event. </summary> <param name="e"> A <see cref="T:MyFormsApp_ILMerge.Documents.Events.DocumentStateChangedEventArgs" /> that corresponds to what the old and new states of the document object are. </param>
         protected virtual void OnDocumentStateChanged(
             DocumentStateChangedEventArgs e)
             => DocumentStateChanged?.Invoke(this, e);
 
-        /// <summary>
-        /// Raises the
-        /// <see cref="E:MyFormsApp_ILMerge.Documents.Document.FileTypeNotSupported" />
-        /// event.
-        /// </summary>
+///  <summary> Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.FileTypeNotSupported" /> event. </summary>
         protected virtual void OnFileTypeNotSupported()
             => FileTypeNotSupported?.Invoke(this, EventArgs.Empty);
 
-        /// <summary>
-        /// Sets the new state of the document object.
-        /// </summary>
-        /// <param name="newState">
-        /// (Required.) A
-        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
-        /// enumeration value that corresponds to what the new state of the document object
-        /// should be.
-        /// </param>
+///  <summary> Sets the new state of the document object. </summary> <param name="newState"> (Required.) A <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" /> enumeration value that corresponds to what the new state of the document object should be. </param>
         protected void SetDocumentState(DocumentState newState)
         {
             CurrentState = newState;
@@ -307,10 +181,7 @@ namespace MyFormsApp_ILMerge.Documents
             return;
         }
 
-        /// <summary>
-        /// Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DataUpdated" />
-        /// event.
-        /// </summary>
+///  <summary> Raises the <see cref="E:MyFormsApp_ILMerge.Documents.Document.DataUpdated" /> event. </summary>
         protected virtual void UpdateAllViews()
             => DataUpdated?.Invoke(this, EventArgs.Empty);
     }

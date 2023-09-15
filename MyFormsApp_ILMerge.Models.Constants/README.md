@@ -1,4 +1,4 @@
-<a name='assembly'></a>
+﻿<a name='assembly'></a>
 # MyFormsApp_ILMerge.Models.Constants
 
 ## Contents
