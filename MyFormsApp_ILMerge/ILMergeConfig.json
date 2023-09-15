@@ -24,6 +24,7 @@
         "Core.Logging.dll",
         "Core.Logging.Constants.dll",
         "Core.Logging.Events.dll",
+        "Core.Win32.Interact.dll",
         "log4net.dll"
     ]
   },

@@ -1,6 +1,9 @@
-﻿using Core.Logging;
+﻿using Core.Assemblies.Info;
+using Core.Logging;
 using Core.Logging.Constants;
+using Core.Win32.Interact;
 using MyFormsApp_ILMerge.Logging.Actions;
+using MyFormsApp_ILMerge.Properties;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -15,12 +18,7 @@ namespace MyFormsApp_ILMerge
         [STAThread]
         public static void Main()
         {
-            LogFileManager.InitializeLogging(
-                muteConsole: false,
-                infrastructureType: LoggingInfrastructureType.PostSharp,
-                logFileName: Get.LogFilePath(),
-                applicationName: Get.ApplicationProductName()
-            );
+            SetupLogging();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -54,6 +52,28 @@ namespace MyFormsApp_ILMerge
         private static extern int SetProcessDpiAwareness(
             int PROCESS_DPI_AWARENESS
         );
+
+        private static void SetupLogging()
+        {
+            try
+            {
+                LogFileManager.InitializeLogging(
+                    muteConsole: false,
+                    infrastructureType: LoggingInfrastructureType.PostSharp,
+                    logFileName: Get.LogFilePath(),
+                    applicationName: Get.ApplicationProductName()
+                );
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+
+                Messages.ShowStopError(
+                    $"{Resources.Error_CannotSetupLogging.Replace("%APPNAME%", AssemblyMetadata.ShortProductName)}\n\n{ex.Message}"
+                );
+            }
+        }
 
         // According to https://msdn.microsoft.com/en-us/library/windows/desktop/dn280512(v=vs.85).aspx
         private enum DpiAwareness

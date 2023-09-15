@@ -1,5 +1,6 @@
 ﻿using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
+using Core.Logging.Constants;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
 using MyFormsApp_ILMerge.Documents.Interfaces;
@@ -58,10 +59,16 @@ namespace MyFormsApp_ILMerge.Documents
 
                 _currentState = value;
 
-                if (oldState != value)
-                    OnDocumentStateChanged(
-                        new DocumentStateChangedEventArgs(value, oldState)
-                    );
+                if (oldState == value)
+                    return;
+
+                DebugUtils.WriteLine(
+                    DebugLevel.Info,
+                    $"*** INFO: Document state changed from '{oldState}' to '{value}'."
+                );
+                OnDocumentStateChanged(
+                    new DocumentStateChangedEventArgs(value, oldState)
+                );
             }
         }
 
