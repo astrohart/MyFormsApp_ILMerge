@@ -3,6 +3,13 @@
 
 ## Contents
 
+- [Get](#T-MyFormsApp_ILMerge-Program-Get 'MyFormsApp_ILMerge.Program.Get')
+  - [LOG_FILE_PATH_TERMINATOR](#F-MyFormsApp_ILMerge-Program-Get-LOG_FILE_PATH_TERMINATOR 'MyFormsApp_ILMerge.Program.Get.LOG_FILE_PATH_TERMINATOR')
+  - [AssemblyCompany](#P-MyFormsApp_ILMerge-Program-Get-AssemblyCompany 'MyFormsApp_ILMerge.Program.Get.AssemblyCompany')
+  - [AssemblyProduct](#P-MyFormsApp_ILMerge-Program-Get-AssemblyProduct 'MyFormsApp_ILMerge.Program.Get.AssemblyProduct')
+  - [AssemblyTitle](#P-MyFormsApp_ILMerge-Program-Get-AssemblyTitle 'MyFormsApp_ILMerge.Program.Get.AssemblyTitle')
+  - [ApplicationProductName()](#M-MyFormsApp_ILMerge-Program-Get-ApplicationProductName 'MyFormsApp_ILMerge.Program.Get.ApplicationProductName')
+  - [LogFilePath()](#M-MyFormsApp_ILMerge-Program-Get-LogFilePath 'MyFormsApp_ILMerge.Program.Get.LogFilePath')
 - [MainWindow](#T-MyFormsApp_ILMerge-MainWindow 'MyFormsApp_ILMerge.MainWindow')
   - [#ctor()](#M-MyFormsApp_ILMerge-MainWindow-#ctor 'MyFormsApp_ILMerge.MainWindow.#ctor')
   - [components](#F-MyFormsApp_ILMerge-MainWindow-components 'MyFormsApp_ILMerge.MainWindow.components')
@@ -19,6 +26,101 @@
   - [Error_CannotSetupLogging](#P-MyFormsApp_ILMerge-Properties-Resources-Error_CannotSetupLogging 'MyFormsApp_ILMerge.Properties.Resources.Error_CannotSetupLogging')
   - [Error_FileTypeNotSupported](#P-MyFormsApp_ILMerge-Properties-Resources-Error_FileTypeNotSupported 'MyFormsApp_ILMerge.Properties.Resources.Error_FileTypeNotSupported')
   - [ResourceManager](#P-MyFormsApp_ILMerge-Properties-Resources-ResourceManager 'MyFormsApp_ILMerge.Properties.Resources.ResourceManager')
+
+<a name='T-MyFormsApp_ILMerge-Program-Get'></a>
+## Get `type`
+
+##### Namespace
+
+MyFormsApp_ILMerge.Program
+
+##### Summary
+
+Exposes static methods to obtain data from various data sources.
+
+<a name='F-MyFormsApp_ILMerge-Program-Get-LOG_FILE_PATH_TERMINATOR'></a>
+### LOG_FILE_PATH_TERMINATOR `constants`
+
+##### Summary
+
+A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') containing the final piece of the path of the
+log file.
+
+<a name='P-MyFormsApp_ILMerge-Program-Get-AssemblyCompany'></a>
+### AssemblyCompany `property`
+
+##### Summary
+
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the product name defined
+for this application.
+
+##### Remarks
+
+This property is really an alias for the
+[AssemblyCompany](#P-xyLOGIX-Core-Assemblies-Info-AssemblyMetadata-AssemblyCompany 'xyLOGIX.Core.Assemblies.Info.AssemblyMetadata.AssemblyCompany')
+property.
+
+<a name='P-MyFormsApp_ILMerge-Program-Get-AssemblyProduct'></a>
+### AssemblyProduct `property`
+
+##### Summary
+
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the product name defined
+for this application.
+
+##### Remarks
+
+This property is really an alias for the
+[ShortProductName](#P-xyLOGIX-Core-Assemblies-Info-AssemblyMetadata-ShortProductName 'xyLOGIX.Core.Assemblies.Info.AssemblyMetadata.ShortProductName')
+property.
+
+<a name='P-MyFormsApp_ILMerge-Program-Get-AssemblyTitle'></a>
+### AssemblyTitle `property`
+
+##### Summary
+
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the assembly title defined
+for this application.
+
+##### Remarks
+
+This property is really an alias for the
+[AssemblyTitle](#P-xyLOGIX-Core-Assemblies-Info-AssemblyMetadata-AssemblyTitle 'xyLOGIX.Core.Assemblies.Info.AssemblyMetadata.AssemblyTitle')
+property --- except that all whitespace is replace with underscores.
+
+<a name='M-MyFormsApp_ILMerge-Program-Get-ApplicationProductName'></a>
+### ApplicationProductName() `method`
+
+##### Summary
+
+Gets a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains a user-friendly name for
+the software product of which this application or class library is a part.
+
+##### Returns
+
+A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains a user-friendly name for the
+software product of which this application or class library is a part.
+
+##### Parameters
+
+This method has no parameters.
+
+<a name='M-MyFormsApp_ILMerge-Program-Get-LogFilePath'></a>
+### LogFilePath() `method`
+
+##### Summary
+
+Obtains a [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified
+pathname of the file that should be used for logging messages.
+
+##### Returns
+
+A [String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') that contains the fully-qualified pathname of
+the file that should be used for logging messages.
+
+##### Parameters
+
+This method has no parameters.
 
 <a name='T-MyFormsApp_ILMerge-MainWindow'></a>
 ## MainWindow `type`
