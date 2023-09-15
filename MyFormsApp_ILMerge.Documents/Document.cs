@@ -20,6 +20,11 @@ namespace MyFormsApp_ILMerge.Documents
     /// </remarks>
     public class Document : IDocument
     {
+        /// <summary>
+        /// One of the
+        /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
+        /// enumeration values that indicates the current state of the document.
+        /// </summary>
         private DocumentState _currentState;
 
         /// <summary>
@@ -131,6 +136,15 @@ namespace MyFormsApp_ILMerge.Documents
         public event EventHandler FileTypeNotSupported;
 
         /// <summary> Specifies whether the document that is currently open may be closed. </summary>
+        /// <remarks>
+        /// <b>NOTE: </b>If we had Saving functionality enabled in this
+        /// application, then this method would do more than simply return
+        /// <see langword="true" />, as it does in its current implementation.
+        /// <para />
+        /// However, since we really mean for this application to demonstrate using
+        /// <c>ILMerge</c>, we do not care about asking whether the user wants to save
+        /// their modified changes before closing.
+        /// </remarks>
         /// <returns>
         /// <see langword="true" /> if the user can close the currently-open
         /// document; <see langword="false" /> otherwise.
