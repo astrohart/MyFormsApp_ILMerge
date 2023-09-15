@@ -1,6 +1,7 @@
 ﻿using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
 using Core.Logging.Constants;
+using Core.Win32.Interact;
 using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
 using MyFormsApp_ILMerge.Documents.Interfaces;
@@ -110,8 +111,8 @@ namespace MyFormsApp_ILMerge.Documents
         /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface.
         /// </summary>
         /// <remarks>This object is responsible for loading and saving the file's data.</remarks>
-        private static ITextFileModel TextFileModel
-            => GetFileModel.For<string>(FileType.Text) as ITextFileModel;
+        private static ITextFileModel TextFileModel { get; } =
+            GetFileModel.For<string>(FileType.Text) as ITextFileModel;
 
         /// <summary> Occurs when the document's data has been updated. </summary>
         /// <remarks>
@@ -154,8 +155,27 @@ namespace MyFormsApp_ILMerge.Documents
         /// <see langword="false" /> otherwise.
         /// </returns>
         public bool IsFileTypeSupported(string pathname)
-            => !string.IsNullOrWhiteSpace(pathname) &&
-               ".txt".Equals(Path.GetExtension(pathname));
+        {
+            var result = false;
+
+            try
+            {
+                if (string.IsNullOrWhiteSpace(pathname))
+                    return result;
+                if (!File.Exists(pathname)) return result;
+
+                result = ".txt".Equals(Path.GetExtension(pathname));
+            }
+            catch (Exception ex)
+            {
+                // dump all the exception info to the log
+                DebugUtils.LogException(ex);
+
+                result = false;
+            }
+
+            return result;
+        }
 
         // since this app does not have save functionality
         /// <summary> Opens a document with the specified <paramref name="pathname" />. </summary>
@@ -168,24 +188,24 @@ namespace MyFormsApp_ILMerge.Documents
         {
             var result = false;
 
-            if (string.IsNullOrWhiteSpace(pathname)) return result;
-            if (!File.Exists(pathname)) return result;
-
-            // Check if we can close the current file
-            if (!CloseDocument()) return result;
-
-            // Check whether this is a type of file that we support
-            if (!IsFileTypeSupported(pathname))
-            {
-                OnFileTypeNotSupported();
-                return result;
-            }
-
-            SetDocumentState(DocumentState.Opening);
-
             // Read the data
             try
             {
+                if (string.IsNullOrWhiteSpace(pathname)) return result;
+                if (!File.Exists(pathname)) return result;
+
+                // Check if we can close the current file
+                if (!CloseDocument()) return result;
+
+                // Check whether this is a type of file that we support
+                if (!IsFileTypeSupported(pathname))
+                {
+                    OnFileTypeNotSupported();
+                    return result;
+                }
+
+                SetDocumentState(DocumentState.Opening);
+
                 // Clear existing data
                 FileContents = string.Empty;
 
@@ -206,6 +226,8 @@ namespace MyFormsApp_ILMerge.Documents
             }
             catch (Exception ex)
             {
+                Messages.ShowStopError(ex.Message);
+
                 MessageBox.Show(
                     ex.Message, Application.ProductName, MessageBoxButtons.OK,
                     MessageBoxIcon.Stop, MessageBoxDefaultButton.Button1

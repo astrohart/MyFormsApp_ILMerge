@@ -92,6 +92,10 @@
       <Project>{0D198925-B01C-4DDE-A062-ED7D7BFD0FAA}</Project>
       <Name>Core.Logging</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Core.Win32.Interact\Core.Win32.Interact\Core.Win32.Interact.csproj">
+      <Project>{9C2F7C24-51B4-4F98-AF2E-3A6BF12F5268}</Project>
+      <Name>Core.Win32.Interact</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyFormsApp_ILMerge.Documents.Constants\MyFormsApp_ILMerge.Documents.Constants.csproj">
       <Project>{A265AC0F-78F3-437F-9578-6F85195E570D}</Project>
       <Name>MyFormsApp_ILMerge.Documents.Constants</Name>
