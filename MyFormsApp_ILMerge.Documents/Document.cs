@@ -1,4 +1,3 @@
-using PostSharp.Patterns.Model;
 using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
 using Core.Logging.Constants;
@@ -125,18 +124,15 @@ namespace MyFormsApp_ILMerge.Documents
         /// This event serves to let the views of this document know that they
         /// need to update themselves to display the most recent data.
         /// </remarks>
-        [WeakEvent]
         public event EventHandler DataUpdated;
 
         /// <summary> Occurs when the state of the document changes. </summary>
-        [WeakEvent]
         public event DocumentStateChangedEventHandler DocumentStateChanged;
 
         /// <summary>
         /// Occurs when the user attempts to open a file whose type this document
         /// object does not support.
         /// </summary>
-        [WeakEvent]
         public event EventHandler FileTypeNotSupported;
 
         /// <summary> Specifies whether the document that is currently open may be closed. </summary>
