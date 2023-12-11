@@ -1,9 +1,11 @@
-﻿using MyFormsApp_ILMerge.Documents.Constants;
+using PostSharp.Patterns.Threading;
+using MyFormsApp_ILMerge.Documents.Constants;
 using System;
 
 namespace MyFormsApp_ILMerge.Documents.Events
 {
     /// <summary> Provides information for DocumentStateChanged event handlers. </summary>
+[ExplicitlySynchronized]
     public class DocumentStateChangedEventArgs : EventArgs
     {
         /// <summary>
