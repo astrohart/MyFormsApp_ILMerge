@@ -1,4 +1,4 @@
-﻿using MyFormsApp_ILMerge.Models.Constants;
+using MyFormsApp_ILMerge.Models.Constants;
 using MyFormsApp_ILMerge.Models.Interfaces;
 
 namespace MyFormsApp_ILMerge.Models

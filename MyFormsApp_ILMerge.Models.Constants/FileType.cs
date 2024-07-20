@@ -1,4 +1,4 @@
-﻿namespace MyFormsApp_ILMerge.Models.Constants
+namespace MyFormsApp_ILMerge.Models.Constants
 {
     /// <summary> Type of file data to be modeled. </summary>
     public enum FileType
