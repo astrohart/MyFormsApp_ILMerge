@@ -1,5 +1,4 @@
-
-namespace MyFormsApp_ILMerge
+﻿namespace MyFormsApp_ILMerge
 {
     partial class MainWindow
     {

@@ -1,4 +1,4 @@
-using MyFormsApp_ILMerge.Documents.Constants;
+﻿using MyFormsApp_ILMerge.Documents.Constants;
 using MyFormsApp_ILMerge.Documents.Events;
 using System;
 

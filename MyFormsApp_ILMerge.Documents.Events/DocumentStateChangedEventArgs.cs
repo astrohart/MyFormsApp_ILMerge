@@ -1,4 +1,4 @@
-using PostSharp.Patterns.Threading;
+﻿using PostSharp.Patterns.Threading;
 using MyFormsApp_ILMerge.Documents.Constants;
 using System;
 

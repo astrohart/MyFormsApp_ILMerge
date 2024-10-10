@@ -1,4 +1,4 @@
-namespace MyFormsApp_ILMerge.Documents.Events
+﻿namespace MyFormsApp_ILMerge.Documents.Events
 {
     /// <summary> Represents a handler for a <c>DocumentStateChanged</c> event. </summary>
     /// <param name="sender">

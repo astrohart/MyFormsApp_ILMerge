@@ -1,4 +1,4 @@
-namespace MyFormsApp_ILMerge.Documents.Interfaces
+﻿namespace MyFormsApp_ILMerge.Documents.Interfaces
 {
     /// <summary>
     /// Defines the publicly-exposed methods and properties of a document

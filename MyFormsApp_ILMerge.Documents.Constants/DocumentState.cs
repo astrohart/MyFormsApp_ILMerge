@@ -1,4 +1,4 @@
-namespace MyFormsApp_ILMerge.Documents.Constants
+﻿namespace MyFormsApp_ILMerge.Documents.Constants
 {
     /// <summary> Values that explain what state a document object is in. </summary>
     public enum DocumentState

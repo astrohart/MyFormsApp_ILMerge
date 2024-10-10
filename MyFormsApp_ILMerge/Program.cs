@@ -1,4 +1,4 @@
-using Core.Assemblies.Info;
+﻿using Core.Assemblies.Info;
 using Core.Logging;
 using Core.Logging.Constants;
 using Core.Win32.Interact;
