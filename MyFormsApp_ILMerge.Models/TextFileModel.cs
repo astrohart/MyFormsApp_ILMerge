@@ -18,10 +18,10 @@ namespace MyFormsApp_ILMerge.Models
         static TextFileModel() { }
 
         /// <summary>
-        /// Empty, protected constructor to prohibit direct allocation of this
+        /// Empty, private constructor to prohibit direct allocation of this
         /// class.
         /// </summary>
-        protected TextFileModel() { }
+        private TextFileModel() { }
 
         /// <summary>
         /// Gets a <see cref="T:MyFormsApp_ILMerge.Models.Constants.FileType" />
