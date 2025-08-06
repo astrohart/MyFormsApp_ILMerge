@@ -46,7 +46,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// This empty, protected constructor to prohibit direct allocation of
         /// this class.
         /// </remarks>
-        protected Document()
+        private Document()
             => SetDocumentState(
                 DocumentState.Idle
             ); // start this object out in the Idle state
