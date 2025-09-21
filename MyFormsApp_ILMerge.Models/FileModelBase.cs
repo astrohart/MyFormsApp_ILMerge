@@ -17,13 +17,13 @@ namespace MyFormsApp_ILMerge.Models
         /// If the value of this property is <see langword="null" /> or the blank
         /// string, then this means that a file is not currently loaded.
         /// </remarks>
-        public string FileName { get; protected set; }
+        public string FileName { [DebuggerStepThrough] get; [DebuggerStepThrough] protected set; }
 
         /// <summary>
         /// Gets a <see cref="T:MyFormsApp_ILMerge.Models.Constants.FileType" />
         /// enumeration value that describes which type of file this object models.
         /// </summary>
-        public abstract FileType FileType { get; }
+        public abstract FileType FileType { [DebuggerStepThrough] get; }
 
         /// <summary> Loads the data from the file on the disk with the specified pathname. </summary>
         /// <param name="pathname">
