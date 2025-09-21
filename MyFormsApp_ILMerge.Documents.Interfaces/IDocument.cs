@@ -22,13 +22,13 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Constants.DocumentState" />
         /// enumeration values that explain what state the document object is in.
         /// </summary>
-        DocumentState CurrentState { get; }
+        DocumentState CurrentState { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether
         /// this document has been modified.
         /// </summary>
-        bool Dirty { get; }
+        bool Dirty { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets or sets a reference to an instance of an object that implements
@@ -36,10 +36,10 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// interface and which plays the role of the document template that "owns" this
         /// document object.
         /// </summary>
-        IDocTemplate DocTemplate { get; set; }
+        IDocTemplate DocTemplate { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
         /// <summary> Gets or sets the contents of the file that is currently open. </summary>
-        string FileContents { get; }
+        string FileContents { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the
@@ -49,7 +49,7 @@ namespace MyFormsApp_ILMerge.Documents.Interfaces
         /// If the value of this property is <see langword="null" /> or the empty
         /// string, then no document is loaded, or the user is working on a new document.
         /// </remarks>
-        string FileName { get; }
+        string FileName { [DebuggerStepThrough] get; }
 
         /// <summary> Occurs when the document's data has been updated. </summary>
         /// <remarks>
