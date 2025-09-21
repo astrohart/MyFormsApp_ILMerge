@@ -15,7 +15,7 @@
     /// handle the <c>DocumentStateChanged</c> event.
     /// </remarks>
     public delegate void DocumentStateChangedEventHandler(
-        object sender,
-        DocumentStateChangedEventArgs e
+        [NotLogged] object sender,
+        [NotLogged] DocumentStateChangedEventArgs e
     );
 }
