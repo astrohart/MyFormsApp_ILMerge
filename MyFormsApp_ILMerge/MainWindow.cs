@@ -26,7 +26,7 @@ namespace MyFormsApp_ILMerge
         /// the <see cref="T:MyFormsApp_ILMerge.Documents.Interfaces.IDocument" />
         /// interface.
         /// </summary>
-        private static IDocument Document { get; } = GetDocument.SoleInstance();
+        private static IDocument Document { [DebuggerStepThrough] get; } = GetDocument.SoleInstance();
 
         /// <summary> Opens the document having the specified <paramref name="path" />. </summary>
         /// <param name="path">
@@ -79,7 +79,7 @@ namespace MyFormsApp_ILMerge
         /// An <see cref="T:System.EventArgs" /> that contains the event
         /// data.
         /// </param>
-        protected override void OnLoad(EventArgs e)
+        protected override void OnLoad([NotLogged] EventArgs e)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace MyFormsApp_ILMerge
             }
         }
 
-        private void OnDocumentDataUpdated(object sender, EventArgs e)
+        private void OnDocumentDataUpdated([NotLogged] object sender, [NotLogged] EventArgs e)
         {
             try
             {
@@ -124,20 +124,20 @@ namespace MyFormsApp_ILMerge
             }
         }
 
-        private void OnFileExit(object sender, EventArgs e)
+        private void OnFileExit([NotLogged] object sender, [NotLogged] EventArgs e)
             => Close();
 
-        private void OnFileOpen(object sender, EventArgs e)
+        private void OnFileOpen([NotLogged] object sender, [NotLogged] EventArgs e)
         {
             if (openFileDialog.ShowDialog(this) == DialogResult.Cancel) return;
 
             OpenDocumentFile(openFileDialog.FileName);
         }
 
-        private void OnViewStatusBar(object sender, EventArgs e)
+        private void OnViewStatusBar([NotLogged] object sender, [NotLogged] EventArgs e)
             => statusBar.Visible = !statusBar.Visible;
 
-        private void OnViewToolbar(object sender, EventArgs e)
+        private void OnViewToolbar([NotLogged] object sender, [NotLogged] EventArgs e)
             => standardToolStrip.Visible = !standardToolStrip.Visible;
 
         private void ResetFileContentTextBox()
