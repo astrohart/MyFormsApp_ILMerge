@@ -35,7 +35,7 @@ namespace MyFormsApp_ILMerge.Models
         /// implements the
         /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface.
         /// </summary>
-        public static ITextFileModel Instance { get; } = new TextFileModel();
+        public static ITextFileModel Instance { [DebuggerStepThrough] get; } = new TextFileModel();
 
         /// <summary> Loads the data from the file on the disk with the specified pathname. </summary>
         /// <param name="pathname">
