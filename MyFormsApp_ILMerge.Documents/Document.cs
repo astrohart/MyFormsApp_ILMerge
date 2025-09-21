@@ -82,7 +82,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// Gets a <see cref="T:System.Boolean" />  value that indicates whether
         /// this document has been modified.
         /// </summary>
-        public bool Dirty { get; private set; }
+        public bool Dirty { [DebuggerStepThrough] get; [DebuggerStepThrough] private set; }
 
         /// <summary>
         /// Gets or sets a reference to an instance of an object that implements
@@ -90,10 +90,10 @@ namespace MyFormsApp_ILMerge.Documents
         /// interface and which plays the role of the document template that "owns" this
         /// document object.
         /// </summary>
-        public IDocTemplate DocTemplate { get; set; }
+        public IDocTemplate DocTemplate { [DebuggerStepThrough] get; [DebuggerStepThrough] set; }
 
         /// <summary> Gets or sets the contents of the file that is currently open. </summary>
-        public string FileContents { get; private set; }
+        public string FileContents { [DebuggerStepThrough] get; [DebuggerStepThrough] private set; }
 
         /// <summary>
         /// Gets a <see cref="T:System.String" /> that contains the
@@ -103,20 +103,20 @@ namespace MyFormsApp_ILMerge.Documents
         /// If the value of this property is <see langword="null" /> or the empty
         /// string, then no document is loaded, or the user is working on a new document.
         /// </remarks>
-        public string FileName { get; private set; }
+        public string FileName { [DebuggerStepThrough] get; [DebuggerStepThrough] private set; }
 
         /// <summary>
         /// Gets a reference to the one and only instance of
         /// <see cref="T:MyFormsApp_ILMerge.Documents.Document" />.
         /// </summary>
-        public static Document Instance { get; } = new Document();
+        public static Document Instance { [DebuggerStepThrough] get; } = new Document();
 
         /// <summary>
         /// Gets a reference to an instance of the object that implements the
         /// <see cref="T:MyFormsApp_ILMerge.Models.Interfaces.ITextFileModel" /> interface.
         /// </summary>
         /// <remarks>This object is responsible for loading and saving the file's data.</remarks>
-        private static ITextFileModel TextFileModel { get; } =
+        private static ITextFileModel TextFileModel { [DebuggerStepThrough] get; } =
             GetFileModel.For<string>(FileType.Text) as ITextFileModel;
 
         /// <summary> Occurs when the document's data has been updated. </summary>
@@ -313,7 +313,7 @@ namespace MyFormsApp_ILMerge.Documents
         /// that corresponds to what the old and new states of the document object are.
         /// </param>
         protected virtual void OnDocumentStateChanged(
-            DocumentStateChangedEventArgs e
+        [NotLogged] DocumentStateChangedEventArgs e
         )
             => DocumentStateChanged?.Invoke(this, e);
 
