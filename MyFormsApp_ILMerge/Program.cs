@@ -34,8 +34,8 @@ namespace MyFormsApp_ILMerge
         }
 
         private static void OnThreadException(
-            object sender,
-            ThreadExceptionEventArgs e
+            [NotLogged] object sender,
+            [NotLogged] ThreadExceptionEventArgs e
         )
         {
             MessageBox.Show(
