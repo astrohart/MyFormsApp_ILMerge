@@ -40,7 +40,7 @@ namespace MyFormsApp_ILMerge.Documents.Events
         /// enumeration value that corresponds to what the new state of the document object
         /// is.
         /// </summary>
-        public DocumentState NewState { get; }
+        public DocumentState NewState { [DebuggerStepThrough] get; }
 
         /// <summary>
         /// Gets the
@@ -48,6 +48,6 @@ namespace MyFormsApp_ILMerge.Documents.Events
         /// enumeration value that corresponds to what state the document object used to be
         /// in.
         /// </summary>
-        public DocumentState OldState { get; }
+        public DocumentState OldState { [DebuggerStepThrough] get; }
     }
 }
