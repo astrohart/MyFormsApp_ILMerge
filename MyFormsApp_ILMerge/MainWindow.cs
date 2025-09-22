@@ -1,4 +1,6 @@
-﻿using Alphaleonis.Win32.Filesystem;
+﻿using PostSharp.Patterns.Diagnostics;
+using System.Diagnostics;
+using Alphaleonis.Win32.Filesystem;
 using Core.Logging;
 using Core.Logging.Constants;
 using Core.Win32.Interact;
