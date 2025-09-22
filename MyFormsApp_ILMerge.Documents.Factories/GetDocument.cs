@@ -1,4 +1,5 @@
-﻿using MyFormsApp_ILMerge.Documents.Interfaces;
+﻿using System.Diagnostics;
+using MyFormsApp_ILMerge.Documents.Interfaces;
 using PostSharp.Patterns.Diagnostics;
 
 namespace MyFormsApp_ILMerge.Documents.Factories
